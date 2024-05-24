@@ -39,7 +39,7 @@ h2,h3{
 }
 
 a {
-    color: #522A28;
+    color: variable.$text-color;
     font-family: "fot-tsukuardgothic-std", sans-serif, "游明朝", YuMincho, "Hiragino Mincho ProN W3",
         "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
         "ＭＳ 明朝", serif;
@@ -78,4 +78,17 @@ img {
     .pcOnly {
         display: none;
     }
+}
+
+@media (hover: hover) and (pointer: fine) {//ホバーアクションをPCだけにする
+a:hover {
+    opacity: 0.7
+}
+}
+
+//IE11用に以下のコードも追加
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+a:hover {
+    opacity: 0.7
+}
 }

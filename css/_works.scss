@@ -32,11 +32,11 @@ worksページ
         margin-bottom: 0;
         padding-left: 8%;
         font-size: 33px;
-        // font-weight: bold;
+        font-weight: bold;
         color: variable.$dusty-pink;
 
         @include media(md){
-            font-size: 22px;
+            font-size: 20px;
         }
 
         &::before{
@@ -70,10 +70,11 @@ worksページ
         position: relative; 
         border-radius: 10px;
         width: 40%;
-        // width: 32%;
         margin: 10px;
+
         @include media(md){
             width: 100%;
+            margin: 4px;
         }
 
         img{
@@ -164,11 +165,11 @@ worksページ
         margin-bottom: 0;
         padding-left: 12%;
         font-size: 33px;
-        // font-weight: bold;
+        font-weight: bold;
         color: variable.$dusty-pink;
 
         @include media(md){
-            font-size: 22px;
+            font-size: 20px;
         }
 
         &::before{
@@ -197,6 +198,10 @@ worksページ
         margin: 10px;
         position: relative; 
         border-radius: 10px;
+
+        @include media(md){
+            margin: 4px;
+        }
 
         img{
             width: 100%;
@@ -281,11 +286,11 @@ worksページ
         margin-bottom: 0;
         padding-left: 12%;
         font-size: 33px;
-        // font-weight: bold;
+        font-weight: bold;
         color: variable.$dusty-pink;
 
         @include media(md){
-            font-size: 22px;
+            font-size: 20px;
         }
 
         &::before{
@@ -314,6 +319,10 @@ worksページ
         border-radius: 10px;
         width: 30%;
         margin: 10px;
+
+        @include media(md){
+            margin: 4px;
+        }
 
         img{
             width: 100%;
@@ -737,6 +746,7 @@ works/下層ページ
         color: variable.$dusty-pink;
 
         @include media(md){
+            border-bottom: 2px dotted variable.$peach-fuzz;
             font-size: 20px;
         } 
     }

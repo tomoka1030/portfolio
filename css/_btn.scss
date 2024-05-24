@@ -102,8 +102,10 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 95px;
+
     @include media(md){
         display: block;
+        margin-top: 60px;
         padding-right: 4vw;
         padding-left: 28vw;
     }

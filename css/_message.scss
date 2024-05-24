@@ -203,11 +203,12 @@ messageページ
 
     &__title{
         display: inline-block;
-        font-size: 25px;
+        font-size: 20px;
+        font-weight: bold;
         color: variable.$dusty-pink;
 
         @include media(md){
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 
@@ -389,10 +390,12 @@ messageページ
             transform: rotate(135deg) translateX(-50%);
             left: 48%;
             border: 0;
-            border-top: solid 2px variable.$dusty-pink;
-            border-right: solid 2px variable.$dusty-pink;
+            border-top: solid 2px variable.$peach-fuzz;
+            border-right: solid 2px variable.$peach-fuzz;
 
             @include media(md){
+                width: 8px;
+                height: 8px;
                 left: 46%;
             }
         }
@@ -406,11 +409,13 @@ messageページ
             bottom: -60px;
             left: 48%;
             border: 0;
-            border-top: solid 2px variable.$dusty-pink;
-            border-right: solid 2px variable.$dusty-pink;
+            border-top: solid 2px variable.$peach-fuzz;
+            border-right: solid 2px variable.$peach-fuzz;
             transform: rotate(135deg)translateX(-50%);
 
             @include media(md){
+                width: 8px;
+                height: 8px;
                 left: 46%;
             }
         }
@@ -436,9 +441,11 @@ messageページ
         padding: 10px;
         border-bottom: 4px dotted variable.$peach-fuzz;
         font-size: 30px;
+        font-weight: bold;
         color: variable.$dusty-pink;
 
         @include media(md){
+            border-bottom: 2px dotted variable.$peach-fuzz;
             font-size: 20px;
         }
 
@@ -578,6 +585,7 @@ messageページ
         padding: 10px;
         border-bottom: 4px dotted variable.$peach-fuzz;
         font-size: 30px;
+        font-weight: bold;
         color: variable.$dusty-pink;
 
         &::before{
@@ -585,6 +593,7 @@ messageページ
         }
 
         @include media(md){
+            border-bottom: 2px dotted variable.$peach-fuzz;
             font-size: 20px;
         }
     }

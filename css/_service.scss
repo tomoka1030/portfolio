@@ -26,7 +26,7 @@
 
         @include media(md){
             padding-left: 25px;
-            font-size: 13px;
+            font-size: 14px;
         }
     }
 
@@ -56,12 +56,10 @@
 
     &__item{
         width:31.7%;
-        
-        
 
         @include media(md){
             width:100%;
-            margin-bottom: 100px;
+            margin-bottom: 140px;
         }
     }
 
@@ -77,9 +75,6 @@
             font-size: 30px;
         }
     }
-
-    
-
 
     &__img {
         text-align: center;
@@ -242,6 +237,11 @@
         width: 70%;
         margin: 0 auto;
         padding: 13px 17px;
+
+        @include media(md){
+            width: 80%;
+            padding: 13px 3px;
+        }
         }
     
     &__title{

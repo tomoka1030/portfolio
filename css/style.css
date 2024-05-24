@@ -109,6 +109,7 @@ color
 @media screen and (max-width: 767px) {
   .page__link {
     display: block;
+    margin-top: 60px;
     padding-right: 4vw;
     padding-left: 28vw;
   }
@@ -358,7 +359,7 @@ h2, h3 {
 }
 
 a {
-  color: #522A28;
+  color: #73524F;
   font-family: "fot-tsukuardgothic-std", sans-serif, "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   /*下線を消す*/
   text-decoration: none;
@@ -387,6 +388,16 @@ img {
   }
   .pcOnly {
     display: none;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    opacity: 0.7;
+  }
+}
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  a:hover {
+    opacity: 0.7;
   }
 }
 /* ------------
@@ -667,12 +678,12 @@ body {
 }
 @media screen and (max-width: 767px) {
   .section__title-contact .en {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
 .contact {
-  padding-top: 150px;
+  padding-top: 170px;
   padding-bottom: 132px;
   background: linear-gradient(0deg, rgb(255, 219, 196) 0%, rgba(255, 219, 196, 0) 100%);
 }
@@ -762,7 +773,7 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .header__logo img {
-    width: 121px;
+    width: 125px;
     padding-top: 5px;
     position: relative;
     z-index: 99;
@@ -846,6 +857,7 @@ body {
 @media screen and (max-width: 1000px) {
   .menu_btn {
     display: block;
+    top: 16px;
   }
 }
 
@@ -923,19 +935,15 @@ body {
   padding-bottom: 52px;
   opacity: 1;
   z-index: 3;
-  background: rgba(255, 229, 213, 0.8);
+  background: rgba(255, 229, 213, 0.9);
   border-radius: 0px 0px 20px 20px;
   transition: 0.7s;
 }
 @media screen and (max-width: 1000px) {
   #header.done.panelactive .header__nav {
     width: 100%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  #header.done.panelactive .header__nav {
-    width: 100%;
     height: 100vh;
+    padding-top: 130px;
   }
 }
 #header.done.panelactive .header__nav ul {
@@ -1183,6 +1191,12 @@ Thanksページ
   }
 }
 
+.gradientBackground {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(0deg, rgb(255, 219, 196) 0%, rgba(255, 219, 196, 0) 100%);
+}
+
 /* ------------
 contact ページ
 ------------- */
@@ -1291,6 +1305,12 @@ contact ページ
   border: 2px solid #FFBE98;
 }
 
+.gradientBackground {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(0deg, rgb(255, 219, 196) 0%, rgba(255, 219, 196, 0) 100%);
+}
+
 /* -------------------------------
     Serviceページ
 ---------------------------------- */
@@ -1315,7 +1335,7 @@ contact ページ
 @media screen and (max-width: 767px) {
   .service__message {
     padding-left: 25px;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 .service__inner {
@@ -1346,7 +1366,7 @@ contact ページ
 @media screen and (max-width: 767px) {
   .service__item {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 140px;
   }
 }
 .service__number {
@@ -1515,6 +1535,12 @@ contact ページ
   margin: 0 auto;
   padding: 13px 17px;
 }
+@media screen and (max-width: 767px) {
+  .flow__body {
+    width: 80%;
+    padding: 13px 3px;
+  }
+}
 .flow__title {
   text-align: center;
   font-size: 18px;
@@ -1583,11 +1609,12 @@ worksページ
   margin-bottom: 0;
   padding-left: 8%;
   font-size: 33px;
+  font-weight: bold;
   color: #DAA180;
 }
 @media screen and (max-width: 767px) {
   .website .section__title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .website .section__title::before {
@@ -1624,6 +1651,7 @@ worksページ
 @media screen and (max-width: 767px) {
   .website__img {
     width: 100%;
+    margin: 4px;
   }
 }
 .website__img img {
@@ -1701,11 +1729,12 @@ worksページ
   margin-bottom: 0;
   padding-left: 12%;
   font-size: 33px;
+  font-weight: bold;
   color: #DAA180;
 }
 @media screen and (max-width: 767px) {
   .banner .section__title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .banner .section__title::before {
@@ -1730,6 +1759,11 @@ worksページ
   margin: 10px;
   position: relative;
   border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .banner__img {
+    margin: 4px;
+  }
 }
 .banner__img img {
   width: 100%;
@@ -1806,11 +1840,12 @@ worksページ
   margin-bottom: 0;
   padding-left: 12%;
   font-size: 33px;
+  font-weight: bold;
   color: #DAA180;
 }
 @media screen and (max-width: 767px) {
   .graphic .section__title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .graphic .section__title::before {
@@ -1835,6 +1870,11 @@ worksページ
   border-radius: 10px;
   width: 30%;
   margin: 10px;
+}
+@media screen and (max-width: 767px) {
+  .graphic__img {
+    margin: 4px;
+  }
 }
 .graphic__img img {
   width: 100%;
@@ -2249,6 +2289,7 @@ works/下層ページ
 }
 @media screen and (max-width: 767px) {
   .logo .about__logo {
+    border-bottom: 2px dotted #FFBE98;
     font-size: 20px;
   }
 }
@@ -2520,12 +2561,13 @@ messageページ
 }
 .worry__title {
   display: inline-block;
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: bold;
   color: #DAA180;
 }
 @media screen and (max-width: 767px) {
   .worry__title {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .worry__box {
@@ -2707,11 +2749,13 @@ messageページ
   transform: rotate(135deg) translateX(-50%);
   left: 48%;
   border: 0;
-  border-top: solid 2px #DAA180;
-  border-right: solid 2px #DAA180;
+  border-top: solid 2px #FFBE98;
+  border-right: solid 2px #FFBE98;
 }
 @media screen and (max-width: 767px) {
   .worry__answer::before {
+    width: 8px;
+    height: 8px;
     left: 46%;
   }
 }
@@ -2725,12 +2769,14 @@ messageページ
   bottom: -60px;
   left: 48%;
   border: 0;
-  border-top: solid 2px #DAA180;
-  border-right: solid 2px #DAA180;
+  border-top: solid 2px #FFBE98;
+  border-right: solid 2px #FFBE98;
   transform: rotate(135deg) translateX(-50%);
 }
 @media screen and (max-width: 767px) {
   .worry__answer::after {
+    width: 8px;
+    height: 8px;
     left: 46%;
   }
 }
@@ -2754,10 +2800,12 @@ messageページ
   padding: 10px;
   border-bottom: 4px dotted #FFBE98;
   font-size: 30px;
+  font-weight: bold;
   color: #DAA180;
 }
 @media screen and (max-width: 767px) {
   .feature .section__title {
+    border-bottom: 2px dotted #FFBE98;
     font-size: 20px;
   }
 }
@@ -2893,6 +2941,7 @@ messageページ
   padding: 10px;
   border-bottom: 4px dotted #FFBE98;
   font-size: 30px;
+  font-weight: bold;
   color: #DAA180;
 }
 .introduction .section__title::before {
@@ -2900,6 +2949,7 @@ messageページ
 }
 @media screen and (max-width: 767px) {
   .introduction .section__title {
+    border-bottom: 2px dotted #FFBE98;
     font-size: 20px;
   }
 }
@@ -3385,7 +3435,7 @@ messageページ
   padding-bottom: 52px;
   opacity: 1;
   z-index: 3;
-  background: rgba(255, 229, 213, 0.8);
+  background: rgba(255, 229, 213, 0.9);
   border-radius: 0px 0px 20px 20px;
   transition: 0.7s;
 }
@@ -3532,6 +3582,11 @@ section {
     font-size: 4vw;
   }
 }
+@media screen and (max-width: 560px) {
+  .lead__title {
+    font-size: 4.27vw;
+  }
+}
 .lead__text {
   font-size: 1.2vw;
   line-height: 1.875;
@@ -3547,6 +3602,11 @@ section {
     display: block;
     font-size: 3vw;
     letter-spacing: 0.1em;
+  }
+}
+@media screen and (max-width: 560px) {
+  .lead__text {
+    font-size: 3.73vw;
   }
 }
 .lead .btn-circle {

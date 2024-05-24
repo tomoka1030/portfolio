@@ -314,7 +314,7 @@
     padding-bottom: 52px;
     opacity: 1;
     z-index: 3;
-    background: rgba(255, 229, 213, 0.8);
+    background: rgba(255, 229, 213, 0.9);
     border-radius: 0px 0px 20px 20px;
     transition: 0.7s;
 
@@ -457,6 +457,11 @@ section {
         @include media(md){
             font-size:4vw;
         }
+
+
+        @include media(sm){
+            font-size:4.27vw;
+        }
     }
 
     &__text{
@@ -472,6 +477,10 @@ section {
             display: block;
             font-size:3vw;
             letter-spacing: 0.1em;
+        }
+
+        @include media(sm){
+            font-size:3.73vw;
         }
     }
 
