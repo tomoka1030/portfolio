@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@use "variable";/*1番最初に読み込む */
+@use "reset";
+@use "common";
+
+/*ベース */
+@use "btn";
+@use "header";
+@use "footer";
+
+/*メイン */
+@use "thanks.scss";
+@use "contact";
+@use "service";
+@use "works";
+@use "message";
+@use "top";
+
+@use "mediaQuery";

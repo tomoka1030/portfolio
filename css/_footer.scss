@@ -1,0 +1,119 @@
+@charset "utf-8";
+@use "variable";
+
+@use "btn";
+@use "mediaQuery" as *;
+/* --------
+フッター
+-------- */
+.footer {
+    top: 0px;
+    // width: 100%;
+    // background: linear-gradient(#FFDBC4, #FFD1B6);
+    @include media(xl){
+        padding-top: 40px;
+        text-align: center;
+        background-color: #FFDBC4;
+        padding-bottom: 26px;
+    }
+
+    a:hover {
+        opacity: 0.5;
+        }
+        
+    &__inner {
+        // display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        height: 162px;
+        padding: 0 5%;
+        background: linear-gradient(#FFDBC4, #FFD1B6);
+        @include media(xl){
+            height: 650px;
+            background: none;
+        }
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        padding-top: 34px;
+
+        @include media(xl){
+            display: block;
+            padding-top: 0;
+        }
+    }
+
+    &__logo {
+        @include media(xl){
+            margin-bottom: 54px;
+        }
+
+        img{
+            width: 148px;
+
+            @include media(xl){
+                width: 101px;
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        @include media(xl){
+            display: block;
+        }
+    }
+
+    &__item{
+        padding-left: 36px;
+        text-align: center;
+
+        @include media(xl){
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
+        a{
+            line-height:1.5;
+        }
+    } 
+
+    &__title-ja{
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        // margin-bottom: 5px;
+
+        @include media(xl){
+            font-size: 10px;
+        }
+    }
+
+    &__title{
+    font-size: 18px;
+    font-family: variable.$ff-en; 
+
+        @include media(xl){
+            font-size: 18px;
+        }
+    }
+
+    &__sns{
+        display: block;
+        width: 24px;
+
+        @include media(xl){
+            margin: 0 auto;
+            padding-top:18px;
+        }
+    }
+
+
+    &__copy{
+        font-size: 13px;
+    }
+
+}

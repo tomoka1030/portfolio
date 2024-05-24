@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+@use "variable";
+@use "mediaQuery" as *;
+
+
+/* ------------
+ボタン
+------------- */
+
+/* メインボタン 丸ボタン */
+.btn-circle {
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 100px;
+    padding-right: 14px;
+
+    @include media(md){
+        margin-top: 40px;
+    }
+
+    a {
+        display: inline-block;
+        position: relative;
+        padding: 1em 80px 1em 0em;
+        color: variable.$text-color;
+        font-size: 16px;
+        font-weight: normal;
+        transition: 0.3s;
+        text-decoration: none;
+
+        @include media(lg){
+            padding: 1em 65px 1em 0em;
+            font-size: 14px;
+        }
+
+    /* before:丸 */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 64px;
+        height: 64px;
+        border: 3px solid #aaaaaa;
+        border-radius: 50vh;
+        background: #FFFDFA;
+        border: 1px solid variable.$peach-fuzz;
+        transition: 0.3s;
+        @include media(lg){
+            width: 46px;
+            height: 46px;
+        }
+    }
+
+    /* after:矢印 */
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 31px;
+        transform: translateY(-50%) rotate(45deg);
+        width: 5px;
+        height: 5px;
+        border-top: 1px solid variable.$text-color;
+        border-right: 1px solid variable.$text-color;
+        transition: 0.3s;
+        @include media(lg){
+            right: 23px;
+        }
+    }
+
+    &:hover::before {
+        background: rgb(255,190,152);
+        background: linear-gradient(90deg, rgba(255,190,152,1) 0%, rgba(251,222,215,1) 100%);
+    }
+
+    &:hover::after {
+        border-top: 1px solid variable.$cream-beige ;
+        border-right: 1px solid variable.$cream-beige;
+    }
+    }
+}
+
+/*worksと実績詳細ページの丸ボタンは中央に配置 */
+.graphic .btn-circle, .work .btn-circle{
+    margin-top: 130px;
+    text-align: center;
+    padding-right: 1px;
+    justify-content: center;
+}
+
+
+/*ページ内リンク 下矢印ボタン */
+
+.page__link{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 95px;
+    @include media(md){
+        display: block;
+        padding-right: 4vw;
+        padding-left: 28vw;
+    }
+
+    &-btn{
+        position: relative;
+        display: inline-block;
+    }
+}
+.page__link {
+    .page__item{
+        @include media(md){
+            display: block;
+            width: 40%;
+            text-align: left;
+            margin-right: 10px;
+            margin-left: auto;/* 右寄せ */
+        }
+
+        @include media(sm){
+            width: 60%;
+        }
+
+        a {
+            padding-left: 8px;
+            color: variable.$text-color;
+            text-decoration: none;
+            transition: 0.3s;
+
+            @include media(md){
+                width: 100%;
+                margin-bottom: 27px;
+                font-size: 15px;
+            }
+
+            &:before {/* before：下線 */
+                position: absolute;
+                visibility: hidden; /* ホバー前は非表示 */
+                content: '';
+                width: 130%;
+                height: 1px;
+                bottom: -8px;
+                left: 0;
+                border-radius: 3px;
+                background: variable.$peach-fuzz;
+                opacity: 0;
+                transition: 0.3s;
+                
+                @include media(md){
+                    position: absolute;
+                    visibility: visible; 
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    bottom: -8px;
+                    left: 0;
+                    border-radius: 3px;
+                    background: variable.$peach-fuzz;
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+            }
+
+            &:after {/* before：矢印 */
+                position: absolute;
+                content: '';
+                width: 7px;
+                height: 7px;
+                border: 0;
+                border-top: solid 1px variable.$peach-fuzz;
+                border-right: solid 1px variable.$peach-fuzz;
+                transform: rotate(135deg);
+                right: -18px;
+                top: 10%;
+                margin: auto;
+                transition: 0.3s;
+
+                @include media(md){
+                    right: 10px;
+                }
+            }
+
+            &:hover:before {
+                visibility: visible; /* ホバー前は非表示 */
+                bottom: -10px;
+                opacity: 1;
+                transition: 0.3s;
+            }
+
+            &:hover:after {
+                bottom: -1px;
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.message__btn{
+    text-align: left;
+}
+
+/* サービスページで使用 矢印ボタン */
+.btn-arrow {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+
+    a {
+        color: variable.$text-color;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    &:before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border: 0;
+        border-top: solid 1px variable.$dusty-pink;
+        border-right: solid 1px variable.$dusty-pink;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        transition: 0.3s;
+        }
+
+    &:hover{
+        color: variable.$dusty-pink;
+        }
+    }
+
+/*問い合わせフォームへのリンクボタン */
+
+.contact .btn__area {
+    display: block;
+    text-align: center;
+    margin-bottom: 36px;
+
+    .contact-btn {
+        display: inline-flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 195px;
+        height: 36px;
+        box-sizing: border-box;
+        margin-top: 36px;
+        border-radius: 10px;
+        border: 1px solid variable.$pink-beige;
+        background: variable.$cream-beige;
+        cursor: pointer;
+
+        @include media(md){
+            height: 44px;
+            border: 1px solid variable.$peach-fuzz;   
+            font-size: 15px;
+        }
+    
+    .contact__img {
+            width: 16px;
+            height: auto;
+        }
+    
+    &:hover {
+        border-radius: 10px;
+        border: 1px solid variable.$peach-fuzz;
+            // color: variable.$cream-beige;
+            // background: rgb(255, 190, 152);
+            // background: linear-gradient(90deg, rgba(255, 190, 152, 1) 0%, rgba(251, 222, 215, 1) 100%);
+        }
+        }
+    }
+
+
+/*問い合わせフォームの送信ボタン */
+
+.inquire .btn__area {
+    display: block;
+    text-align: center;
+    margin-bottom: 100px;
+
+    @include media(md){
+        margin-bottom: 0;
+    }
+    
+
+    .submit-btn {
+        display: inline-flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 147px;
+        height: 36px;
+        box-sizing: border-box;
+        margin-top: 80px;
+        border-radius: 10px;
+        border: 1px solid variable.$pink-beige;
+        background: variable.$cream-beige;
+        font-family: variable.$ff-gothic;
+
+    .send__img {
+        width: 17px;
+        height: auto;
+    }
+
+    &:hover {
+        border-radius: 10px;
+        border: 1px solid variable.$peach-fuzz;
+    }
+    }
+}
+
+/*2個以上のボタンの配置 */
+.btn__container{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+
+    @include media(md){
+        display: block;
+    }
+
+    .btn-circle{
+        @include media(md){
+            margin-top: 25px;
+        }
+    }
+}

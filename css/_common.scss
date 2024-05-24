@@ -1,0 +1,359 @@
+@charset "utf-8";
+@use "variable";
+@use "btn";
+@use "mediaQuery" as *;
+/* ------------
+全ページ共通のcss
+// ------------- */
+// * {
+//   outline: 2px solid blue;
+// }
+
+body {
+	display: none;
+}
+
+.spOnly{
+  display: none;
+
+  @include media(md){
+    display: block;
+  }
+}
+
+/*グラデーション背景 */
+body{
+  background-image: url("../images/gradient_background_pc.webp");
+  background-size: cover;//横も縦もいっぱいに広がる。高さが足りなくなっても途切れない。
+  background-repeat: no-repeat;
+  @include media(md){
+    background-image: url("../images/gradient_background_sp.webp");
+}
+}
+
+// .main{
+// margin-top: 120px;}
+
+
+/*下層ページのメインビジュアル */
+.mainvisual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  // min-height: calc(100svh - 120px);
+  // min-height: 42svh;
+
+  @include media(xl){
+    // min-height: calc(100svh - 63px);
+    // top: 63px;
+    margin-top: 63px;
+    height: 15rem;
+  }
+  
+  
+  img{
+    position: absolute;
+      top: 0;
+      left: 50%;
+      transform:translateX(-50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+  }
+
+  &__title {
+    position: absolute;
+    display: inline-block;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    text-align: center;
+      &-ja{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 17px;
+        letter-spacing: 0.2em;
+
+        @include media(md){
+          font-size: 12px;
+        }
+      }
+      &-en{
+        font-size: 32px;
+        font-family: variable.$ff-en; 
+
+        @include media(lg){
+          font-size: 28px;
+        }
+
+        @include media(md){
+          font-size: 24px;
+        }
+      }
+
+      @include media(xl){
+        align-items: center;
+      }
+
+  }
+
+}
+
+/*横線付きの見出し */
+.section__title{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 73px;
+  padding-left: 60px;
+
+  @include media(md){
+    margin-bottom: 41px;
+    padding-left: 30px;
+  }
+
+  &-ja{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 17px;
+  letter-spacing: 0.2em;
+
+    @include media(md){
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+  }
+
+  &-en{
+    font-size: 42px;
+    font-family: variable.$ff-en; 
+
+    @include media(md){
+      font-size: 24px;
+    }
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 60%;
+    display: inline-block;
+    width: 48px;
+    height: 1px;
+    background:variable.$text-color;
+
+    @include media(md){
+      width: 17px;
+    }
+  }
+}
+
+// *slick//message/seivice/works*/ドットを線に変更
+.slick-track {
+  display: flex;
+}
+.slick-slide {
+  height: auto !important;
+}
+.slick-dots {
+  position: absolute;
+  bottom: -50px;
+  display: block;
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+
+  @include media(md){
+    width: 85%;
+    bottom: -30px;
+  }
+
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 50px;
+}
+
+  .slick-dots li button
+{
+  opacity: 0;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li
+{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 3px;
+    background: variable.$pink-beige;
+    margin: 0;
+    cursor: pointer;
+
+    @include media(lg){
+      width: 130px;
+    }
+
+    @include media(md){
+      width: 70px;
+    }
+}
+
+.slick-dots .slick-active {
+    border-radius: 10px;
+    background: variable.$peach-fuzz;
+    cursor: pointer;
+}
+
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:before,
+    .slick-next:before {
+        content: "";
+        opacity: 1;
+    }
+
+    .slick-prev/*戻る矢印*/, 
+    .slick-next/*次へ矢印*/ {
+        display: block;
+        width: 11px;
+        height: 11px;
+        border-top: 2px solid variable.$text-color; /*矢印の色*/
+        border-right: 2px solid variable.$text-color; /*矢印の色*/
+        position: absolute; /*絶対配置にする*/
+    }
+
+    .slick-prev {
+        /*戻る矢印*/
+        // left: 5%;
+        z-index: 1; /*レイヤーの重なり順*/
+        transform: translateY(-50%) rotate(-135deg); /*translateY(-50%)基準点が上下中央になる*/
+    }
+
+    .slick-next {
+        /*次へ矢印*/
+        // right: 5%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+/*各ページ下部にあるcontactセクション */
+
+
+.section__title-contact {
+  line-height: 1.5;
+  .ja{
+    display: block;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    margin-bottom: 5px;
+
+    @include media(md){
+      font-size: 16px;
+    }
+  }
+  .en{
+    font-size: 32px;
+    font-family: variable.$ff-en; 
+
+    @include media(lg){
+      font-size: 28px;
+    }
+
+    @include media(md){
+      font-size: 26px;
+    }
+  }
+}
+
+.contact{
+  padding-top: 150px;
+  padding-bottom: 132px;
+  background: linear-gradient(0deg, rgba(255,219,196,1) 0%, rgba(255,219,196,0) 100%);
+  
+  @include media(md){
+    padding-top: 200px;
+  }
+
+  &__inner{
+      display: block;
+      text-align: center;
+      max-width: variable.$width-inner;
+      margin: 0 auto;
+      }
+      
+  .btn-rectangle{
+          margin-top: 36px; 
+      }
+
+  &__text{
+      // margin-top: 42px;
+      padding: 0 10px;
+      line-height: 1.5;
+
+      @include media(lg){
+        font-size: 15px;
+      }
+
+      @include media(md){
+        font-size: 14px;
+      }
+  }    
+}
+
+/*fadeUp */
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+      transform: translate3d(0px, 40px, 0px);
+      }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0px, 0px, 0px);
+    }
+  }
+  
+  
+  /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+  .fadeUpTrigger{
+      opacity: 0;
+      transition: opacity 1000ms ease, transform 1000ms ease;
+  }
+

@@ -1,0 +1,861 @@
+@charset "utf-8";
+
+@use "variable";
+
+@use "btn";
+@use "mediaQuery" as *;
+/* ------------
+worksページ
+------------- */
+
+/*Webサイト制作*/
+.website{
+    padding-top: 230px;
+    margin: 0 auto;
+
+    @include media(md){
+        padding-top: 130px;
+    }
+
+    &__inner{
+        max-width: variable.$width-inner;
+        padding: 0 2vw;
+        margin: 0 auto;
+
+        @include media(md){
+            padding: 0;
+        }
+    }
+
+
+    .section__title{
+        margin-bottom: 0;
+        padding-left: 8%;
+        font-size: 33px;
+        // font-weight: bold;
+        color: variable.$dusty-pink;
+
+        @include media(md){
+            font-size: 22px;
+        }
+
+        &::before{
+            display: none;
+        }
+    }
+
+    &__slider{
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        gap: 69px;
+        // justify-content: space-between;
+        margin-top: 56px;
+
+        @include media(md){
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+    .slick-dots li{
+        width: 180px;
+        @include media(md){
+        width: 80px;
+        }
+    }       
+
+
+    &__img{
+        position: relative; 
+        border-radius: 10px;
+        width: 40%;
+        // width: 32%;
+        margin: 10px;
+        @include media(md){
+            width: 100%;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            transform: scale(1);
+            filter: blur(0);
+            transition: .3s ease-in-out;
+            }
+    
+        .mask{
+            position: relative;
+            border-radius: 10px;
+            transition: .3s ease-in-out;/*移り変わる速さ*/
+            display: block;/*画像をくくるspanタグをブロック要素にする*/
+            text-align: center;
+            line-height: 0;/*行の高さを0にする*/
+            overflow:hidden;/*拡大してはみ出る要素を隠す*/     
+            }   
+
+        &:hover img{
+            border-radius: 10px;
+            transform: scale(1.1);/*拡大の値*/
+            }
+
+        & p.caption{
+            position: absolute;
+            width: 80%;
+            opacity:0;
+            transition: .5s ease-in-out;/*移り変わる速さ*/
+            z-index:3;/*テキストを前面に出す*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: variable.$text-color;
+            line-height: 1.5;
+
+            & span.title{
+                font-size: 18px;
+                border-bottom: 2px solid  variable.$dusty-pink;
+                padding-bottom: 3px;
+            }
+            & span{
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+
+        &:hover p.caption{
+            opacity:1;
+            }
+        
+}
+
+    .website__img:hover .mask::before{
+        content:"";
+        position: absolute;
+        border-radius: 10px;
+        z-index:2;
+        top:10px;
+        left:10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background: rgba(255, 255, 255, 0.7);
+    }
+}
+
+
+/*バナー制作*/
+.banner{
+    padding-top: 193px;
+    // position: relative;
+    // padding: 193px 143px 0 143px;
+    // max-width: variable.$width-inner;
+    margin: 0 auto;
+
+    &__inner{
+        max-width: variable.$width-inner;
+        padding: 0 2vw;
+        margin: 0 auto;
+
+        @include media(md){
+            padding: 0;
+        }
+    }
+
+    .section__title{
+        margin-bottom: 0;
+        padding-left: 12%;
+        font-size: 33px;
+        // font-weight: bold;
+        color: variable.$dusty-pink;
+
+        @include media(md){
+            font-size: 22px;
+        }
+
+        &::before{
+            display: none;
+        }
+    }
+
+    &__slider{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 39px;
+        // justify-content: space-between;
+        margin-top: 56px;
+
+        @include media(md){
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+
+
+    &__img{
+        width: 30%;
+        margin: 10px;
+        position: relative; 
+        border-radius: 10px;
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            transform: scale(1);
+            filter: blur(0);
+            transition: .3s ease-in-out;
+            }
+    
+        .mask{
+            position: relative;
+            border-radius: 10px;
+            transition: .3s ease-in-out;/*移り変わる速さ*/
+            display: block;/*画像をくくるspanタグをブロック要素にする*/
+            text-align: center;
+            line-height: 0;/*行の高さを0にする*/
+            overflow:hidden;/*拡大してはみ出る要素を隠す*/     
+            }   
+
+        &:hover img{
+            border-radius: 10px;
+            transform: scale(1.1);/*拡大の値*/
+            }
+
+        & p.caption{
+            position: absolute;
+            width: 80%;
+            opacity:0;
+            transition: .5s ease-in-out;/*移り変わる速さ*/
+            z-index:3;/*テキストを前面に出す*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: variable.$text-color;
+            line-height: 1.5;
+
+            & span.title{
+                font-size: 18px;
+                border-bottom: 2px solid  variable.$dusty-pink;
+                padding-bottom: 3px;
+            }
+            & span{
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+
+        &:hover p.caption{
+            opacity:1;
+            }
+    }
+
+    .banner__img:hover .mask::before{
+        content:"";
+        position: absolute;
+        border-radius: 10px;
+        z-index:2;
+        top:10px;
+        left:10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background: rgba(255, 255, 255, 0.7);
+    }
+}
+
+/*チラシ・名刺*/
+.graphic{
+    padding-top: 193px;
+    margin: 0 auto;
+
+    &__inner{
+        max-width: variable.$width-inner;
+        padding: 0 2vw;
+        margin: 0 auto;
+
+        @include media(md){
+            padding: 0;
+        }
+    }
+
+    .section__title{
+        margin-bottom: 0;
+        padding-left: 12%;
+        font-size: 33px;
+        // font-weight: bold;
+        color: variable.$dusty-pink;
+
+        @include media(md){
+            font-size: 22px;
+        }
+
+        &::before{
+            display: none;
+        }
+    }
+
+    &__slider{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 39px;
+        // justify-content: space-between;
+        margin-top: 56px;
+
+        @include media(md){
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+
+
+    &__img{
+        position: relative; 
+        border-radius: 10px;
+        width: 30%;
+        margin: 10px;
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            transform: scale(1);
+            filter: blur(0);
+            transition: .3s ease-in-out;
+            }
+    
+        .mask{
+            position: relative;
+            border-radius: 10px;
+            transition: .3s ease-in-out;/*移り変わる速さ*/
+            display: block;/*画像をくくるspanタグをブロック要素にする*/
+            text-align: center;
+            line-height: 0;/*行の高さを0にする*/
+            overflow:hidden;/*拡大してはみ出る要素を隠す*/     
+            }   
+
+        &:hover img{
+            border-radius: 10px;
+            transform: scale(1.1);/*拡大の値*/
+            }
+
+        & p.caption{
+            position: absolute;
+            width: 80%;
+            opacity:0;
+            transition: .5s ease-in-out;/*移り変わる速さ*/
+            z-index:3;/*テキストを前面に出す*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: variable.$text-color;
+            line-height: 1.5;
+
+            & span.title{
+                font-size: 18px;
+                border-bottom: 2px solid  variable.$dusty-pink;
+                padding-bottom: 3px;
+            }
+            & span{
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+
+        &:hover p.caption{
+            opacity:1;
+            }
+    }
+
+.graphic__img:hover .mask::before{
+        content:"";
+        position: absolute;
+        border-radius: 10px;
+        z-index:2;
+        top:10px;
+        left:10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .work__btn{
+        @include media(md){
+            padding-right: 4.26vw;
+            padding-left: 4.26vw;
+        }
+    }
+
+    .btn-circle{
+        margin-bottom: 50px;
+        @include media(md){
+            justify-content: end;
+            padding-right: 14px;
+        }
+    }
+    
+}
+
+// .slick-prev slick-arrow{
+//     display: none;
+// }
+
+
+// .slick-track {
+//     display: flex;
+//     }
+//     .slick-slide {
+//     height: auto !important;
+//     } 
+/* -----------------------------------
+works/下層ページ
+-------------------------------------- *
+/*制作実績の詳細ページ基本の型 */
+
+.mainvisual__title-work{
+    padding: 135px 0 135px s0;
+    margin: 0 auto;
+    text-align: center;
+
+    @include media(md){
+        position: absolute;
+        top:30%;
+    }   
+        
+    .mainvisual__title-ja{
+        display: block;
+        margin-bottom: 13px;
+        font-size: 17px;
+        letter-spacing: 0.2em;
+
+        @include media(md){
+            font-size: 12px;
+        }   
+    }
+    .mainvisual__title-en{
+        font-size: 32px;
+        font-family: variable.$ff-en; 
+
+        @include media(md){
+            font-size: 24px;
+        }   
+
+    }
+}
+
+.work{
+    &__img{
+        margin: 0 auto;
+        width: 45vw;
+        img{
+            width: 100%;
+        }
+        @include media(xl){
+            display: block;
+            width: 50vw;
+        }   
+        @include media(md){
+            display: block;
+            width: 65vw;
+        }   
+    }
+    &__inner{
+        max-width: variable.$width-inner;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 141px;
+        margin: 0 auto;
+
+        @include media(xl){
+            gap: 25px;
+            padding-right: 2vw;
+            padding-left: 2vw;
+        }    
+
+        @include media(lg){
+            gap: 16px;
+            padding-right: 2vw;
+            padding-left: 2vw;
+        }     
+
+        @include media(md){
+            padding-right: 4.26vw;
+            padding-left: 4.26vw;
+            display: block;
+        }      
+
+        .section__title{
+            font-size: 32px;
+            font-family: variable.$ff-en;
+
+            @include media(lg){
+                font-size: 28px;
+            }     
+
+            @include media(md){
+                margin-bottom: 62px;
+                font-size: 25px;
+            }   
+
+            &::before{
+                top: 50%;
+                background: variable.$peach-fuzz;
+            }
+        }
+    }
+    &__detail{
+        display: block;
+        text-align: left;
+        width: 67%;
+        padding-left: 20px;
+
+        @include media(md){
+            display: block;
+            width: 90%;
+        }   
+    }
+
+    &__head{
+        display: flex;
+        align-items: flex-start;
+        gap: 36px;
+
+        @include media(md){
+            display: block;
+        }      
+    }
+
+    &__heading{
+        display: block;
+    }
+    &__title{
+        font-size: 25px;
+        font-weight: normal;
+        margin: 0;
+
+        @include media(lg){
+            font-size: 19px;
+        }   
+    }
+    &__lead{
+        margin-top: 14px;
+        font-size: 18px;
+
+        @include media(lg){
+            font-size: 15px;
+        }      
+    }
+    
+
+    &__category{
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+
+        @include media(md){
+            margin-top: 20px;
+        }      
+    } 
+    
+    &__label{
+        display: inline-block;
+        padding: 6px 24px;
+        margin-bottom: 5px;
+        color: variable.$text-color;
+        background-color: variable.$cream-beige;
+        border: 1px solid variable.$peach-fuzz;
+        border-radius: 32px;
+
+        @include media(lg){
+            font-size: 14px;
+            padding: 6px 20px;
+        } 
+        
+        @include media(md){
+            font-size: 14px;
+        }    
+    }  
+
+    &__desc{
+        padding-top: 48px;
+        margin-left: auto;
+
+        & dl{
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            padding-bottom: 32px;
+
+            @include media(lg){
+                gap: 30px;
+            }    
+
+            @include media(md){
+                display: block;
+            }      
+    
+            dt{
+                position: relative;
+                text-align: center;
+                width: 107px;
+                font-size: 15px;
+                padding: 3px 10px;
+
+                @include media(lg){
+                    width: 80px;
+                }   
+
+                &::before, &::after {
+                    content:'';
+                    position: absolute;
+                    width: 6px;
+                    height: 100%;
+                }
+
+                &::before {
+                    border-left: dotted 1px  variable.$peach-fuzz;
+                    border-top: dotted 1px variable.$peach-fuzz;
+                    border-bottom: dotted 1px variable.$peach-fuzz;
+                    top: 0;
+                    left: 0;
+                }
+                &::after {
+                    border-right: dotted 1px variable.$peach-fuzz;
+                    border-top: dotted 1px variable.$peach-fuzz;
+                    border-bottom: dotted 1px variable.$peach-fuzz;
+                    top: 0;
+                    right: 0;
+                }
+
+                @include media(md){
+                    width: 100px;
+                }      
+            }
+    
+            dd{
+                width: 70%;
+                padding-right: 6%;
+                font-size: 15px;
+                line-height: 1.5;
+                letter-spacing: 0.1em;
+
+                @include media(lg){
+                    padding: 0;
+                }    
+
+                @include media(md){
+                    width: 100%;
+                    padding:10px 5px 0 5px;
+                }   
+            }
+        }
+        @include media(md){
+            padding-top: 78px;
+        }      
+    }
+    .btn-circle a {
+        margin-left: auto;
+        margin-right: 4vw;
+    }    
+    
+}
+
+  /*_websiteの画像配置 */
+.img__inner{
+    padding: 0 20px; 
+    @include media(md){
+    padding-right: 4.26vw;
+    padding-left: 4.26vw;
+    display: block;
+    }  
+}    
+.detail__img-pc{
+    max-width: variable.$width-inner;
+    display: flex;
+    flex-wrap: wrap;
+    // gap: 92px;
+    // justify-content: flex-start;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 146px;
+
+    @include media(md){
+        justify-content: center;
+    } 
+    img{
+        width: 45%;
+        border-radius: 10px;
+        margin-bottom: 100px;
+        box-shadow: 5px 5px 5px -2px #F3EBE5;
+        img{
+            width: 100%;
+        }
+
+        @include media(md){
+            width: 100%;
+            margin-bottom: 60px;
+        } 
+    }
+}
+
+.detail__img-sp{
+    max-width: variable.$width-inner;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    img{
+        width: 28%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px -2px #F3EBE5;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+/* ------------------
+デザインパートナーTOMO
+------------------- */
+/*当サイトのロゴについての説明*/
+
+.logo{
+    width: 30%;
+    padding-top: 226px;
+    margin: 0 auto;
+    text-align: center;
+
+
+    @include media(md){
+        width: 80%;
+    } 
+
+    .about__logo{
+        display: inline-block;
+        padding: 10px;
+        border-bottom: 4px dotted variable.$peach-fuzz;
+        font-size: 30px;
+        color: variable.$dusty-pink;
+
+        @include media(md){
+            font-size: 20px;
+        } 
+    }
+
+    &__img{
+        margin: 0 auto;
+        padding-top: 102px;
+        width: 71%;
+        img{
+            width: 100%;
+        }
+
+    }
+    &__desc{
+        margin-top: 80px;
+        font-size: 15px;
+        line-height:1.5 ;
+
+
+        @include media(md){
+            font-size: 14px;
+        } 
+    }
+}
+
+/* ---------------
+ハンバーガーのバナー
+------------------ */
+// 提案
+.text__container {
+    max-width: variable.$width-inner;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 45%;
+
+    @include media(md){
+        width: 70%;
+        text-align: center;
+    }      
+}
+
+.work__text {
+    position: relative;
+    text-align: center;
+    padding: 17px;
+    margin-top: 74px;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0.8rem;
+        height: 1.8rem;
+        content: '';
+    }
+
+    &::before {
+        border-left: dotted 2px variable.$peach-fuzz;
+        left: 0;
+        transform: rotate(-30deg);
+
+        @include media(md){
+            top: 30%;
+            transform: rotate(-30deg) translateX(-10px);
+        }  
+    }
+
+    &::after {
+        border-right: dotted 2px variable.$peach-fuzz;
+        right: 0;
+        transform: rotate(30deg);
+
+        @include media(md){
+            top: 30%;
+            transform: rotate(30deg) translateX(10px);
+        }  
+    }
+
+    @include media(md){
+        font-size: 14px;
+        line-height: 1.5;
+    }      
+}
+
+.banner__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 17%;
+    margin-top: 67px;
+
+    @include media(md){
+        display: block;
+        margin-top: 30px;
+        padding-right: 4.26vw;
+        padding-left: 4.26vw;
+    }      
+}
+.banner__more{
+    display: block;
+    width: 35%;
+    margin-bottom: 87px;
+    p{
+        margin-bottom: 18px;
+    }
+    img{
+        width: 100%;
+    }
+
+    @include media(md){
+        width: 66%;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+    
+    &:last-child {
+        @include media(md){
+        padding-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デザインパートナーTOMO | 優しく温かく行き届く</title>
+    <meta name="description" content="京都府在住のデザイナーです。優しく、温かく、行き届くデザインパートナーとして、幸せの輪を広げるお手伝いをします。">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="android-chrome-256x256.png">
+    <!-- adobe-fonts -->
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'hib7xfm',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ローディング画面 -->
+    <div class="loading">
+        <div class="loading__container">
+            <img src="images/img_lead_logo.png" alt="logo">
+            <p>WELCOME</p>
+        </div>
+        <div class="loading-screen"></div>
+    </div>
+    <header class="header-home">
+        <h1 class="header__logo">
+            <a href="index.html" class="nav__link">
+                <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+            </a>
+        </h1>
+    </header>
+    <main class="main">
+        <div class="fv">
+            <video src="images/mainvisual_pc.mp4" autoplay muted loop></video>
+            <div class="fv__maincopy">
+                <img src="images/mv_textanimation.gif" alt="優しく、温かく、行き届く" class="lazyload">
+            </div>
+            <div class="fv__inner">
+                <nav class="fv__nav">
+                    <div class="fv__item-logo">
+                        <a href="index.html">
+                            <img src="images/img_header__logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="fv__list">
+                        <li class="fv__item">
+                            <a href="message.html">
+                                <span class="fv__title-ja">わたしのおもい</span>
+                                <br>
+                                <span class="fv__title">MESSAGE</span>
+                            </a>
+                        </li>
+                        <li class="fv__item">
+                            <a href="./works/index.html">
+                                <span class="fv__title-ja">つくったもの</span>
+                                <br>
+                                <span class="fv__title">WORKS</span>
+                            </a>
+                        </li>
+                        <li class="fv__item">
+                            <a href="#skill">
+                                <span class="fv__title-ja">できること</span>
+                                <br>
+                                <span class="fv__title">SKILL</span>
+                            </a>
+                        </li>
+                        <li class="fv__item">
+                            <a href="service.html">
+                                <span class="fv__title-ja">サービス</span>
+                                <br>
+                                <span class="fv__title">SERVICE</span>
+                            </a>
+                        </li>
+                        <li class="fv__item">
+                            <a href="contact.html">
+                                <span class="fv__title-ja">お問い合わせ</span>
+                                <br>
+                                <span class="fv__title">CONTACT</span>
+                            </a>
+                        </li>
+                        <li class="fv__item-sns">
+                            <a class="fv__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
+                                <img src="images/img_instagram.png" alt="インスタグラム">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="menu_btn"><span></span><span></span><span></span></div>
+
+        <div id="lead" class="lead">
+            <div class="lead__inner offs">
+                <div class="lead__img" data-delay="0.2">
+                    <img src="images/lead__img.png" alt="ひらたともか">
+                </div>
+                <div class="lead__contents" data-delay="0.2">
+                    <div class="brand__logo">
+                        <img src="images/img_lead_logo.png" alt="ロゴ">
+                    </div>
+                    <p class="lead__title">
+                        「幸せの輪」を広げるために
+                    </p>
+                    <p class="lead__text">
+                        サービスやモノを提供するあなたと、<br class="spOnly">
+                        それを利用するお客さま。<br>
+                        感謝し、感謝される「幸せの輪」<br class="spOnly">
+                        が生まれ、どんどん広がっていく。<br>
+                        <br>
+                        そんな未来を実現するため、<br class="spOnly">
+                        優しく、温かく、行き届く<br>
+                        デザインパートナーとして<br class="spOnly">
+                        お手伝いさせていただきます。
+                    </p>
+
+                    <p class="btn-circle fadeUpTrigger">
+
+                        <a href="message.html" class="message__btn">
+                            メッセージを見る
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <section id="works" class="works">
+            <div class="works__inner">
+                <h2 class="section__title fadeUpTrigger">
+                    <span class="section__title-ja">つくったもの</span>
+                    <span class="section__title-en">WORKS</span>
+                </h2>
+
+                <ul class="works__list offs">
+                    <li class="works__item">
+                        <div class="works__img">
+                            <a href="./works/work-website_01.html">
+                                <div class="mask">
+                                    <img src="images/img_works_web_hairsalon_small.png" alt="website">
+                                    <p class="caption">
+                                        <span class="title">美容室のLP制作</span><br>
+                                        <span>LIFE hair design</span><br>
+                                        <span>担当:デザイン</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="works__category">
+                            <span class="works__label">Webサイト
+                            </span>
+                            <span class="works__label">LP
+                            </span>
+                        </div>
+                    </li>
+                    <li class="works__item" data-delay="0.2">
+                        <div class="works__img">
+                            <a href="./works/work-banner_01.html">
+                                <div class="mask">
+                                    <img src="images/img_works_banner_burger.png" alt="banner">
+                                    <p class="caption">
+                                        <span class="title">ハンバーガーのバナー制作</span><br>
+                                        <span>デラックスバーガー</span><br>
+                                        <span>担当:デザイン</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="works__category">
+                            <span class="works__label">バナー
+                            </span>
+                            <span class="works__label">SNS広告
+                            </span>
+                        </div>
+                    </li>
+                    <li class="works__item" data-delay="0.4">
+                        <div class="works__img">
+                            <a href="./works/work-flyer_01.html">
+                                <div class="mask">
+                                    <img src="images/img_works_flyer_harisalon.png" alt="美容室のWebサイト">
+                                    <p class="caption">
+                                        <span class="title">美容室の新規オープンチラシ</span><br>
+                                        <span>LIFE hair design</span><br>
+                                        <span>担当:デザイン</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="works__category">
+                            <span class="works__label">チラシ
+                            </span>
+                        </div>
+
+                    </li>
+                </ul>
+                <p class="btn-circle fadeUpTrigger">
+
+                    <a href="./works/index.html" class="works__btn">
+                        つくったものを見る
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section id="skill" class="skill">
+            <div class="skill__inner">
+                <h2 class="section__title  fadeUpTrigger">
+                    <span class="section__title-ja">できること</span>
+                    <span class="section__title-en">SKILL</span>
+                </h2>
+                <ul class="skill__list offs">
+                    <li class="skill__item">
+                        <div class="skill__content">
+                            <img src="images/img_skill_illustrator.png" alt="Illustrator" class="skill__img">
+                            <p class="skill__caption">Illustrator
+                            </p>
+                        </div>
+                    </li>
+                    <li class="skill__item" data-delay="0.2">
+                        <div class="skill__content">
+                            <img src="images/img_skill_photoshop.png" alt="Photoshop" class="skill__img">
+                            <p class="skill__caption">Photoshop
+                            </p>
+                        </div>
+                    </li>
+                    <li class="skill__item" data-delay="0.3">
+                        <div class="skill__content">
+                            <img src="images/img_skill_figma.png" alt="Figma" class="skill__img">
+                            <p class="skill__caption">Figma
+                            </p>
+                        </div>
+                    </li>
+                    <li class="skill__item" data-delay="0.4">
+                        <div class="skill__content">
+                            <img src="images/img_skill_canva.png" alt="Canva" class="skill__img">
+                            <p class="skill__caption">Canva
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="skill__list offs">
+                    <li class="skill__item">
+                        <div class="skill__content">
+                            <img src="images/img_skill_html.png" alt="HTML" class="skill__img">
+                            <p class="skill__caption">HTML
+                            </p>
+                        </div>
+                    </li>
+                    <li class="skill__item" data-delay="0.1">
+                        <div class="skill__content">
+                            <img src="images/img_skill_css.png" alt="CSS" class="skill__img">
+                            <p class=" skill__caption">CSS
+                            </p>
+                        </div>
+                    </li>
+                    <li class="skill__item" data-delay="0.2">
+                        <div class="skill__content">
+                            <img src="images/img_skill_JavaScript.png" alt="JavaScript" class="skill__img">
+                            <p class="skill__caption">JavaScript
+                            </p>
+                        </div>
+                    </li>
+                    <li class="skill__item" data-delay="0.3">
+                        <div class="skill__content">
+                            <img src="images/img_skill_sass.png" alt="Sass" class="skill__img">
+                            <p class="skill__caption">Sass
+                            </p>
+                        </div>
+                    </li>
+                    <li class="skill__item" data-delay="0.4">
+                        <div class="skill__content">
+                            <img src="images/img_skill_Github-Logo.png" alt="GitHub" class="skill__img">
+                            <p class="skill__caption">GitHub
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="service" class="service">
+            <div class="service__inner">
+                <h2 class="section__title  fadeUpTrigger">
+                    <span class="section__title-ja">サービス</span>
+                    <span class="section__title-en">SERVICE</span>
+                </h2>
+                <p class="service__message  fadeUpTrigger">デザインからコーディングまでワンストップで<br class="spOnly">
+                    担当できるWEBサイト制作をメインに、<br>
+                    デザインにかかわる様々なお仕事を承っております。
+                </p>
+
+                <ul class="service__list offs">
+                    <li class="service__item">
+                        <p class="service__number">01</p>
+                        <div class="service__img">
+                            <img src="images/img_service_web.png" alt="Webサイト">
+                        </div>
+                        <div class="service__body">
+                            <p class="service__title"> Webサイト制作</p>
+                            <div class="service__category">
+                                <span class="service__label">Webサイト</span>
+                                <span class="service__label">LP</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="service__item" data-delay="0.2">
+                        <p class="service__number">02</p>
+                        <div class="service__img">
+                            <img src="images/img_service_design.png" alt="Webサイト">
+                        </div>
+                        <div class="service__body">
+                            <p class="service__title">バナー制作</p>
+                            <div class="service__category">
+                                <span class="service__label">Web広告</span>
+                                <span class="service__label">SNS広告</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="service__item" data-delay="0.4">
+                        <p class="service__number">03</p>
+                        <div class="service__img">
+                            <img src="images/img_service_graphic.png" alt="Webサイト">
+                        </div>
+                        <div class="service__body">
+                            <p class="service__title">チラシ・名刺制作</p>
+                            <div class="service__category">
+                                <span class="service__label">チラシ</span>
+                                <span class="service__label">名刺</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="btn-circle fadeUpTrigger">
+
+                    <a href="service.html" class="service__btn">
+                        サービスをくわしく見る
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact__inner fadeUpTrigger">
+                <h2 class="section__title-contact">
+                    <span class="ja">お問い合わせ</span>
+                    <span class="en">CONTACT</span>
+                </h2>
+
+                <p class="btn__area">
+                    <a href="contact.html" class="contact-btn">
+                        無料で相談する
+                        <img class="contact__img" src="images/e-mail.png" alt="e-mail">
+                    </a>
+                </p>
+                <p class="contact__text">お仕事のご依頼や、<br class="spOnly">
+                    こんなことできるかなといった疑問、<br>
+                    こんなこと一緒にやらない？<br class="spOnly">
+                    などのお誘いなど、何でもお気軽にどうぞ！
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__container">
+                <p class="footer__logo">
+                    <a href="index.html">
+                        <picture>
+                            <source media="(max-width:1000px)" srcset="images/img_header__logo.png">
+                            <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        </picture>
+                    </a>
+                </p>
+
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="message.html">
+                                <span class="footer__title-ja">わたしのおもい</span>
+                                <br>
+                                <span class="footer__title">MESSAGE</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="./works/index.html">
+                                <span class="footer__title-ja">つくったもの</span>
+                                <br>
+                                <span class="footer__title">WORKS</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html#skill">
+                                <span class="footer__title-ja">できること</span>
+                                <br>
+                                <span class="footer__title">SKILL</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="service.html">
+                                <span class="footer__title-ja">サービス</span>
+                                <br>
+                                <span class="footer__title">SERVICE</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="contact.html">
+                                <span class="footer__title-ja">お問い合わせ</span>
+                                <br>
+                                <span class="footer__title">CONTACT</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
+                                <img src="images/img_instagram.png" alt="インスタグラム">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__copy">
+                © 2024 Design Partner TOMO
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        /* ---------------
+        ローディング画面
+        ----------------- */
+        const loadingAreaBeige = document.querySelector('.loading');
+        const loadingAreaPeachFuzz = document.querySelector('.loading-screen');
+        const loadingText = document.querySelector('.loading__container');
+
+        // Web Storageの確認と設定
+        const webStorage = function () {
+            if (sessionStorage.getItem('visit')) {
+                // ユーザーが再訪問した場合、ローディング画面を非表示に設定
+                loadingAreaBeige.style.display = 'none';
+                loadingAreaPeachFuzz.style.display = 'none';
+                loadingText.style.display = 'none';
+            } else {
+                // ユーザーが初めて訪問した場合、ローディング画面を表示し、訪問フラグを設定
+                sessionStorage.setItem('visit', 'true');
+                setTimeout(() => {
+                    loadingAreaBeige.style.display = 'none';
+                    loadingAreaPeachFuzz.style.display = 'none';
+                    loadingText.style.display = 'none';
+                }, 8000); // 4000msの遅延と4000msのフェードアウトを合計して8000ms後に非表示にする
+            }
+        }
+
+        window.addEventListener('load', () => {
+            if (!sessionStorage.getItem('visit')) {
+                // ユーザーが初めて訪問した場合にのみローディングアニメーションを実行
+                // ローディング中（ベージュ）
+                loadingAreaBeige.animate(
+                    {
+                        opacity: [1, 0],
+                        visibility: 'hidden',
+                    },
+                    {
+                        duration: 2000,
+                        delay: 1000,
+                        easing: 'ease',
+                        fill: 'forwards',
+                    }
+                );
+
+                // ローディング中（ピンクのスクリーン）
+                loadingAreaPeachFuzz.animate(
+                    {
+                        translate: ['0 100vh', '0 0', '0 -100vh']
+                    },
+                    {
+                        duration: 2000,
+                        delay: 1100,
+                        easing: 'ease',
+                        fill: 'forwards',
+                    }
+                );
+
+                // ローディング中テキスト
+                loadingText.animate(
+                    [
+                        {
+                            opacity: 1,
+                            offset: .9  //80%
+                        },
+                        {
+                            opacity: 0,
+                            offset: 1  //100%
+                        },
+                    ],
+                    {
+                        duration: 2100,
+                        easing: 'ease',
+                        fill: 'forwards',
+                    }
+                );
+            }
+            // Web Storageの設定を実行
+            webStorage();
+        });
+    </script>
+
+    <script>
+        /* -------------------------------------
+        スクロールするとハンバーガーメニューがフェードイン
+        ---------------------------------------- */
+        function FixedAnime() {
+            //fvの高さを取得
+            var fvH = $('.fv').outerHeight(true);
+            var scroll = $(window).scrollTop();
+            if (scroll >= fvH) {//fvの高さ以上までスクロールしたら
+                $('.menu_btn').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
+                $('.fv__inner').addClass('done');//fvにdoneというクラス名を付与
+            } else {//それ以外は
+                $('.menu_btn').removeClass('fadeDown');//fadeDownというクラス名を除き
+                $('.fv__inner').removeClass('done');//doneというクラス名を除く
+            }
+        }
+
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).scroll(function () {
+            if (window.matchMedia('(min-width: 1001px)').matches) {
+                FixedAnime();
+            } //画面幅が1000px以上になるとFixedAnimeを実行する
+        });
+        if (window.matchMedia('(max-width: 1000px)').matches) {
+            $('.fv__inner').addClass('done');
+        }//画面幅が1000px以下になると#headerにdoneというクラス名を付与(メニューを表示させる)
+
+        //ボタンをクリックした際のアニメーションの設定
+        $(".menu_btn").click(function () {//ボタンがクリックされたら
+            $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+            $(".fv__inner").toggleClass('panelactive');//fvにpanelactiveクラスを付与
+        });
+        $(".fv__nav li a").click(function () {//ナビゲーションのリンクがクリックされたら
+            $(".menu_btn").removeClass('active');//ボタンの activeクラスを除去し
+            $(".fv__inner").removeClass('panelactive');//fvのpanelactiveクラスも除去
+        });
+
+
+        //リンク先のidまでスムーススクロール
+        // $('.fv__nav li a').click(function () {
+        //     var elmHash = $(this).attr('href');
+        //     var pos = $(elmHash).offset().top - 0;
+        //     $('body,html').animate({ scrollTop: pos }, 1000);
+        //     return false;
+        // });
+    </script>
+
+    <script>
+        /* -------------------------------------
+        スクロールすると子要素が時間差ででてくる
+        ---------------------------------------- */
+        // スクロール出現用関数（.offs ⇄ .ons）
+        function scr_ani(scr, offs_max) {
+            var
+                window_h = $(window).height(),
+                offs_length = $('.offs').length,
+                ons_length = $('.ons').length,
+                wh_pos = 20;// 対象コンテンツの上端が画面下からどれくらい入ったら反応するか。画面高さに対する割合（%）
+            if (offs_length) {
+                var first_item = offs_max - offs_length;
+                for (var i = 0; i < offs_length; i++) {
+                    var data_scr = first_item + i;
+                    var offs = $('.offs[data-scr="' + data_scr + '"]');
+                    var target = offs.offset().top;
+                    var trigger = target - (window_h + scr - window_h * wh_pos / 100);
+                    if (trigger < 0) {
+                        offs.removeClass('offs').addClass('ons');
+                    } else {
+                        break;
+                    }
+                }
+            }
+            if (ons_length) {
+                var last_item = ons_length - 1;
+                for (var i = 0; i < ons_length; i++) {
+                    var data_scr = last_item - i;
+                    var ons = $('.ons[data-scr="' + data_scr + '"]');
+                    var target = ons.offset().top;
+                    var trigger = target - (window_h + scr);
+                    if (trigger > 0) {
+                        ons.removeClass('ons').addClass('offs');
+                    } else {
+                        break;
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script>
+        $(function () {
+
+            // スクロール出現アイテムにナンバリング
+            var offs_max = $('.offs').length;
+            for (var i = 0; i < offs_max; i++) {
+                $('.offs').eq(i).attr('data-scr', i);
+            }
+            // ディレイを設定
+            function setDelay(items) {
+                for (var i = 0; i < items.length; i++) {
+                    let delay = items.eq(i).data('delay');
+                    if (delay) {
+                        items.eq(i).css('transition-delay', delay + 's');
+                    }
+                }
+            }
+
+            //クラス名ににディレイを設定
+            setDelay($('.lead__contents'));
+            setDelay($('.works__item'));
+            setDelay($('.service__item'));
+            setDelay($('.skill__item'));
+
+            // （リロード時など）ロード時にすでにスクロールされている場合に対応
+            var scr = $(window).scrollTop();
+            scr_ani(scr, offs_max);
+
+
+            // スクロール時
+            $(window).on('scroll', function () {
+                var scr = $(window).scrollTop();
+                scr_ani(scr, offs_max);
+            });
+        });
+    </script>
+
+
+    <script>
+        /* --------------
+        ふわっとページ遷移
+        ---------------- */
+
+        $(function () {
+            $('body').fadeIn(1000); //1秒かけてフェードイン
+        });
+
+    </script>
+
+    <script>
+        /* ----------------
+        フェードイン
+        ------------------- */
+
+
+        // // 動きのきっかけとなるアニメーションの名前を定義
+        function fadeAnime() {
+
+            // ふわっ
+            $('.fadeUpTrigger').each(function () { //fadeUpTriggerというクラス名が
+                var elemPos = $(this).offset().top - 40;//要素より、50px上の
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+                } else {
+                    $(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+                }
+            });
+        }
+
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).scroll(function () {
+            fadeAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+    </script>
+
+
+
+    <!-- <script src="js/script.js"></script> -->
+</body>
+
+</html>

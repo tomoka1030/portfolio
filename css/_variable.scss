@@ -1,0 +1,40 @@
+@charset "utf-8";
+@use "mediaQuery" as *;
+
+/* --------
+color
+-------- */
+
+// 背景
+// $background-color: FFF7EF;
+
+// テキストカラー
+$text-color: #73524F;
+// $text-color: #6A4745;
+
+// アクセントカラー
+$peach-fuzz: #FFBE98;
+
+// サブカラー
+$dusty-pink: #DAA180;
+
+// サブカラー
+$cream-beige: #FFFBF9;
+
+// サブカラー
+$pink-beige: #FFE9D8;
+
+/* --------
+レイアウト幅
+---------- */
+
+$width-inner: 1080px;
+
+/* --------
+フォント
+---------- */
+$ff-en:  "Julius Sans One", sans-serif;
+
+$ff-gothic: "fot-tsukuardgothic-std", sans-serif, "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+"ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+"ＭＳ 明朝", serif;

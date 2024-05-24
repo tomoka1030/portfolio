@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICE | デザインパートナーTOMO</title>
+    <meta name="description" content="デザインパートナーTOMOのサービスページです。提供するサービスについて紹介しています。">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="android-chrome-256x256.png">
+    <!-- adobe-fonts -->
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'hib7xfm',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <!-- slick見た目 -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+
+    <header id="header" class="header">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <a href="index.html" class="nav__link">
+                    <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                </a>
+            </h1>
+
+            <nav class="header__nav">
+                <div class="header__item-logo">
+                    <a href="index.html" class="nav__link">
+                        <img src="images/img_header__logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="message.html" class="nav__link">
+                            <span class="header__title-ja">わたしのおもい</span>
+                            <span class="header__title">MESSAGE</span>
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="./works/index.html" class="nav__link">
+                            <span class="header__title-ja">つくったもの</span>
+                            <span class="header__title">WORKS</span>
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="index.html#skill" class="nav__link">
+                            <span class="header__title-ja">できること</span>
+                            <span class="header__title">SKILL</span>
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="service.html" class="nav__link">
+                            <span class="header__title-ja">サービス</span>
+                            <span class="header__title">SERVICE</span>
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="contact.html" class="nav__link">
+                            <span class="header__title-ja">お問い合わせ</span>
+                            <span class="header__title">CONTACT</span>
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
+                            <img src="images/img_instagram.png" alt="インスタグラム">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="menu_btn"><span></span><span></span><span></span></div>
+
+
+    <main class="main">
+
+        <div class="mainvisual">
+            <img src="images/mv_message.jpg" alt="わたしのおもい">
+            <h2 class="mainvisual__title">
+                <span class="mainvisual__title-ja">サービス</span>
+                <span class="mainvisual__title-en">SERVICE</span>
+            </h2>
+        </div>
+
+        <ul class="page__link">
+            <li class="page__item"><a href="#service" class="page__link-btn">サービス</a></li>
+            <li class="page__item"><a href="#flow" class="page__link-btn">ご利用のながれ</a></li>
+        </ul>
+        <section id="service" class="service">
+            <div class="service__inner">
+                <h4 class="service__message fadeUpTrigger">デザインからコーディングまでワンストップで<br class="spOnly">
+                    担当できるWEBサイト制作をメインに、<br>
+                    デザインにかかわる様々なお仕事を承っております。</h4>
+
+                <ul class="service__list offs">
+                    <li class="service__item">
+                        <p class="service__number">01</p>
+                        <div class="service__img">
+                            <img src="images/img_service_web.png" alt="Webサイト">
+                        </div>
+                        <div class="service__body">
+                            <p class="service__title"> Webサイト制作</p>
+                            <div class="service__category">
+                                <span class="service__label">Webサイト</span>
+                                <span class="service__label">LP</span>
+                            </div>
+                            <p class="service__text">
+                                あなたのブランドの価値を最大限魅せるデザインを創り上げます。<br>
+                                JavaScriptやjQueryを使用し、テンプレートでは表現できない雰囲気にあった動きのあるWebサイトができます。
+                            </p>
+                            <a href="./works/index.html#website" class="btn-arrow">
+                                Webサイト制作の実績を見る</a>
+                        </div>
+                    </li>
+                    <li class="service__item" data-delay="0.2">
+                        <p class="service__number">02</p>
+                        <div class="service__img">
+                            <img src="images/img_service_design.png" alt="Webサイト">
+                        </div>
+                        <div class="service__body">
+                            <p class="service__title">バナー制作</p>
+                            <div class="service__category">
+                                <span class="service__label">Web広告</span>
+                                <span class="service__label">SNS広告</span>
+                            </div>
+                            <p class="service__text">
+                                バナーは多くのユーザーの目に触れるため、認知度を高めるチャンスです。<br>
+                                オープンの告知や、新商品の紹介など、ターゲットのニーズにマッチする広告を作ります。
+                            </p>
+                            <a href="./works/index.html#banner" class="btn-arrow">
+                                バナー制作の実績を見る</a>
+                        </div>
+                    </li>
+                    <li class="service__item" data-delay="0.4">
+                        <p class="service__number">03</p>
+                        <div class="service__img">
+                            <img src="images/img_service_graphic.png" alt="Webサイト">
+                        </div>
+                        <div class="service__body">
+                            <p class="service__title">チラシ・名刺制作</p>
+                            <div class="service__category">
+                                <span class="service__label">チラシ</span>
+                                <span class="service__label">名刺</span>
+                            </div>
+                            <p class="service__text">
+                                チラシは手に取り、必ず目に触れるため、記憶にも残りやすい特徴があります。心に響くデザインをして、手に取った方の行動に結びつけます。
+                                名刺などの印刷物も対応可能です！
+                            </p>
+                            <a href="./works/index.html#graphic" class="btn-arrow">
+                                チラシ・名刺制作の実績を見る</a>
+                        </div>
+                    </li>
+                </ul>
+                <p class="btn-circle fadeUpTrigger">
+
+                    <a href="./works/index.html" class="service__btn">
+                        つくったものを見る
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section id="flow" class="flow">
+            <h3 class="section__title fadeUpTrigger">
+                <span class="section__title-ja">ご利用のながれ</span>
+                <span class="section__title-en">FLOW</span>
+            </h3>
+            <div class="flow__slider fadeUpTrigger">
+                <ol class="flow__list">
+                    <li class="flow__item">
+                        <p class="flow__number">STEP 01</p>
+                        <div class="flow__img">
+                            <img src="images/flow__img-1.png" alt="お問い合わせ">
+                        </div>
+                        <div class="flow__body">
+                            <p class="flow__title">お問い合わせ</p>
+                            <p class="flow__text">制作のことや、不安に思って
+                                いること、お困りのことなど、
+                                何でも大丈夫です。<br>
+                                どうぞお気軽にご相談ください。</p>
+                        </div>
+                    </li>
+                    <li class="flow__item">
+                        <p class="flow__number">STEP 02</p>
+                        <div class="flow__img">
+                            <img src="images/flow__img-2.png" alt="ヒアリング">
+                        </div>
+                        <div class="flow__body">
+                            <p class="flow__title">ヒアリング</p>
+                            <p class="flow__text">あなたに寄り添う丁寧なヒアリングを心がけております。<br>
+                                世界観がふわっとしていても大丈夫です。課題解決のため、一緒に考えましょう。</p>
+                        </div>
+                    </li>
+                    <li class="flow__item">
+                        <p class="flow__number">STEP 03</p>
+                        <div class="flow__img">
+                            <img src="images/flow__img-3.png" alt="お見積り・ご契約">
+                        </div>
+                        <div class="flow__body">
+                            <p class="flow__title">お見積り・ご契約</p>
+                            <p class="flow__text">ヒアリング内容をもとに、お見積りを提出します。<br>
+                                見積もりは無料ですのでご安心ください。</p>
+                        </div>
+                    </li>
+                    <li class="flow__item">
+                        <p class="flow__number">STEP 04</p>
+                        <div class="flow__img">
+                            <img src="images/flow__img-4.png" alt="デザイン設計・構築">
+                        </div>
+                        <div class="flow__body">
+                            <p class="flow__title">デザイン設計・構築</p>
+
+                            <p class="flow__text">世界観やコンセプト、目的を明確にした後、あなたのブランドの価値を高めるためのデザイン設計、そして構築をしていきます。</p>
+                        </div>
+                    </li>
+                    <li class="flow__item">
+                        <p class="flow__number">STEP 05</p>
+                        <div class="flow__img">
+                            <img src="images/flow__img-5.png" alt="入稿・公開準備">
+                        </div>
+                        <div class="flow__body">
+                            <p class="flow__title">入稿・公開準備</p>
+                            <p class="flow__text">Webサイトであれば公開前チェック、<br>
+                                チラシであれば入稿作業、<br>
+                                完成に向けた最後の確認作業はとっても重要です。</p>
+                        </div>
+                    </li>
+                    <li class="flow__item">
+                        <p class="flow__number">STEP 06</p>
+                        <div class="flow__img">
+                            <img src="images/flow__img-6.png" alt="納品・公開">
+                        </div>
+                        <div class="flow__body">
+                            <p class="flow__title">納品・公開</p>
+                            <p class="flow__text">ようやくお披露目です。<br>
+                                あなたの想いがたくさん詰まったデザインです。自分のこのように愛して、成長させていきましょう。</p>
+                        </div>
+                    </li>
+                    <li class="flow__item">
+                        <p class="flow__number">STEP 07</p>
+                        <div class="flow__img">
+                            <img src="images/flow__img-7.png" alt="納品・公開">
+                        </div>
+                        <div class="flow__body">
+                            <p class="flow__title">その後のサポート</p>
+                            <p class="flow__text">完成後も、あなたのことをより多くの方に知っていただくため、WebやSNSを活用した広報活動もサポートさせていただきます！</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact__inner fadeUpTrigger">
+                <h2 class="section__title-contact">
+                    <span class="ja">お問い合わせ</span>
+                    <span class="en">CONTACT</span>
+                </h2>
+
+                <p class="btn__area">
+                    <a href="contact.html" class="contact-btn">
+                        無料で相談する
+                        <img class="contact__img" src="images/e-mail.png" alt="e-mail">
+                    </a>
+                </p>
+                <p class="contact__text">お仕事のご依頼や、<br class="spOnly">
+                    こんなことできるかなといった疑問、<br>
+                    こんなこと一緒にやらない？<br class="spOnly">
+                    などのお誘いなど、何でもお気軽にどうぞ！
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__container">
+                <p class="footer__logo">
+                    <a href="index.html">
+                        <picture>
+                            <source media="(max-width:1000px)" srcset="images/img_header__logo.png">
+                            <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        </picture>
+                    </a>
+                </p>
+
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="message.html">
+                                <span class="footer__title-ja">わたしのおもい</span>
+                                <br>
+                                <span class="footer__title">MESSAGE</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="./works/index.html">
+                                <span class="footer__title-ja">つくったもの</span>
+                                <br>
+                                <span class="footer__title">WORKS</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="index.html#skill">
+                                <span class="footer__title-ja">できること</span>
+                                <br>
+                                <span class="footer__title">SKILL</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="service.html">
+                                <span class="footer__title-ja">サービス</span>
+                                <br>
+                                <span class="footer__title">SERVICE</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="contact.html">
+                                <span class="footer__title-ja">お問い合わせ</span>
+                                <br>
+                                <span class="footer__title">CONTACT</span>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
+                                <img src="images/img_instagram.png" alt="インスタグラム">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__copy">
+                © 2024 Design Partner TOMO
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        /* -------------------------------------
+        service/スクロールすると子要素が時間差ででてくる
+        ---------------------------------------- */
+        // スクロール出現用関数（.offs ⇄ .ons）
+        function scr_ani(scr, offs_max) {
+            var
+                window_h = $(window).height(),
+                offs_length = $('.offs').length,
+                ons_length = $('.ons').length,
+                wh_pos = 10;// 対象コンテンツの上端が画面下からどれくらい入ったら反応するか。画面高さに対する割合（%）
+            if (offs_length) {
+                var first_item = offs_max - offs_length;
+                for (var i = 0; i < offs_length; i++) {
+                    var data_scr = first_item + i;
+                    var offs = $('.offs[data-scr="' + data_scr + '"]');
+                    var target = offs.offset().top;
+                    var trigger = target - (window_h + scr - window_h * wh_pos / 100);
+                    if (trigger < 0) {
+                        offs.removeClass('offs').addClass('ons');
+                    } else {
+                        break;
+                    }
+                }
+            }
+            if (ons_length) {
+                var last_item = ons_length - 1;
+                for (var i = 0; i < ons_length; i++) {
+                    var data_scr = last_item - i;
+                    var ons = $('.ons[data-scr="' + data_scr + '"]');
+                    var target = ons.offset().top;
+                    var trigger = target - (window_h + scr);
+                    if (trigger > 0) {
+                        ons.removeClass('ons').addClass('offs');
+                    } else {
+                        break;
+                    }
+                }
+            }
+        };
+
+        $(function () {
+
+            // スクロール出現アイテムにナンバリング
+            var offs_max = $('.offs').length;
+            for (var i = 0; i < offs_max; i++) {
+                $('.offs').eq(i).attr('data-scr', i);
+            }
+            // ディレイを設定
+            var service__item = $('.service__item');
+            for (var i = 0; i < service__item.length; i++) {
+                let delay = service__item.eq(i).data('delay');
+                if (delay) {
+                    service__item.eq(i).css('transition-delay', delay + 's');
+                }
+            }
+
+            // （リロード時など）ロード時にすでにスクロールされている場合に対応
+            var scr = $(window).scrollTop();
+            scr_ani(scr, offs_max);
+
+
+            // スクロール時
+            $(window).on('scroll', function () {
+                var scr = $(window).scrollTop();
+                scr_ani(scr, offs_max);
+            });// end scroll
+
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
