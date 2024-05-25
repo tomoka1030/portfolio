@@ -1,4 +1,25 @@
+/* ----------------
+ホバーをスマホ・タブレットで無効化
+------------------- */
+// タッチデバイスかどうかを判定するための変数 'touch' を定義
+var touch = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 
+if (touch) {     // タッチデバイスの場合以下の処理を実行
+    try {
+        for (var si in document.styleSheets) {
+            var styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
+
+            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
+
+                if (styleSheet.rules[ri].selectorText.match(':hover')) { // ルールのセレクターテキストが ':hover' を含む場合、そのルールを削除
+                    styleSheet.deleteRule(ri);
+                }
+            }
+        }
+    } catch (ex) { } // ルールのセレクターテキストが ':hover' を含む場合、そのルールを削除
+}
 /* --------------
 ふわっとページ遷移
 ---------------- */
