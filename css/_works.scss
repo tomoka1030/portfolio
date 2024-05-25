@@ -98,6 +98,9 @@ worksページ
         &:hover img{
             border-radius: 10px;
             transform: scale(1.1);/*拡大の値*/
+            @include media(md){
+                display: none;
+            }
             }
 
         & p.caption{
@@ -125,6 +128,9 @@ worksページ
 
         &:hover p.caption{
             opacity:1;
+            @include media(md){
+                display: none;
+            }
             }
         
 }
@@ -139,6 +145,11 @@ worksページ
         width: calc(100% - 20px);
         height: calc(100% - 20px);
         background: rgba(255, 255, 255, 0.7);
+    }
+    .website__img:hover{
+        @include media(md){
+            display: none;
+        }
     }
 }
 
@@ -224,6 +235,9 @@ worksページ
         &:hover img{
             border-radius: 10px;
             transform: scale(1.1);/*拡大の値*/
+            @include media(md){
+                display: none;
+            }
             }
 
         & p.caption{
@@ -251,6 +265,9 @@ worksページ
 
         &:hover p.caption{
             opacity:1;
+            @include media(md){
+                display: none;
+            }
             }
     }
 
@@ -264,6 +281,11 @@ worksページ
         width: calc(100% - 20px);
         height: calc(100% - 20px);
         background: rgba(255, 255, 255, 0.7);
+    }
+    .banner__img:hover{
+        @include media(md){
+            display: none;
+        }
     }
 }
 
@@ -345,6 +367,9 @@ worksページ
         &:hover img{
             border-radius: 10px;
             transform: scale(1.1);/*拡大の値*/
+            @include media(md){
+                display: none;
+            }
             }
 
         & p.caption{
@@ -372,7 +397,10 @@ worksページ
 
         &:hover p.caption{
             opacity:1;
+            @include media(md){
+                display: none;
             }
+        }
     }
 
 .graphic__img:hover .mask::before{
@@ -385,6 +413,12 @@ worksページ
         width: calc(100% - 20px);
         height: calc(100% - 20px);
         background: rgba(255, 255, 255, 0.7);
+    }
+
+    .graphic__img:hover{
+        @include media(md){
+            display: none;
+        }
     }
 
     .work__btn{
