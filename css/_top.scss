@@ -48,7 +48,7 @@
     // margin: 0 auto;
     text-align: center;
     position: absolute;
-    top: 45%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation-name:fadeInAnime;
@@ -145,6 +145,7 @@
         right: 10%;
         bottom: 8%;
         z-index: 1;
+        overflow: hidden;
 
         @include media(xl){
             width: 27rem;
@@ -164,6 +165,7 @@
             animation-duration:5s;
             animation-fill-mode:forwards;
             opacity:0;
+
     
             @keyframes copy-fadeInAnime{
                 from {
@@ -208,12 +210,6 @@
             }
         }
         }
-
-    // &__list{
-    //     @include media(xl){
-    //         display: none;  
-    //     }
-    // }
     
     &__item{
             a{
