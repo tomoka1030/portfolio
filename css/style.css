@@ -366,6 +366,12 @@ a {
   /*下線を消す*/
   text-decoration: none;
   /*色を消す*/
+  color: inherit;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 ul {
@@ -1702,6 +1708,17 @@ worksページ
   background: rgba(255, 255, 255, 0.7);
 }
 
+@media screen and (max-width: 767px) {
+  .website__img:hover img {
+    transform: none;
+  }
+  .website__img:hover p.caption {
+    opacity: 0;
+  }
+  .website .website__img:hover .mask::before {
+    display: none;
+  }
+}
 /*バナー制作*/
 .banner {
   padding-top: 193px;
@@ -1813,6 +1830,17 @@ worksページ
   background: rgba(255, 255, 255, 0.7);
 }
 
+@media screen and (max-width: 767px) {
+  .benner__img:hover img {
+    transform: none;
+  }
+  .banner__img:hover p.caption {
+    opacity: 0;
+  }
+  .banner .banner__img:hover .mask::before {
+    display: none;
+  }
+}
 /*チラシ・名刺*/
 .graphic {
   padding-top: 193px;
@@ -1939,6 +1967,17 @@ worksページ
   }
 }
 
+@media screen and (max-width: 767px) {
+  .graphic__img:hover img {
+    transform: none;
+  }
+  .graphic__img:hover p.caption {
+    opacity: 0;
+  }
+  .graphic .graphic__img:hover .mask::before {
+    display: none;
+  }
+}
 /* -----------------------------------
 works/下層ページ
 -------------------------------------- *
@@ -3745,6 +3784,17 @@ works
   transform: translateY(0);
 }
 
+@media screen and (max-width: 767px) {
+  .works__img:hover img {
+    transform: none;
+  }
+  .works__img:hover p.caption {
+    opacity: 0;
+  }
+  .works .works__img:hover .mask::before {
+    display: none;
+  }
+}
 /* ------------
 skill
 ------------- */

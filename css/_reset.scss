@@ -46,13 +46,13 @@ a {
     /*下線を消す*/
     text-decoration: none;
     /*色を消す*/
-    // color: inherit;
-    // transition: 0.3s;
+    color: inherit;
+    transition: 0.3s;
 }
 
-// a:hover {
-//     opacity: 0.5;
-// }
+a:hover {
+    opacity: 0.5;
+}
 
 ul {
     /*左の「・」を消す*/
@@ -79,16 +79,3 @@ img {
         display: none;
     }
 }
-
-// @media (hover: hover) and (pointer: fine) {//ホバーアクションをPCだけにする
-// a:hover {
-//     opacity: 0.7
-// }
-// }
-
-// //IE11用に以下のコードも追加
-// @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-// a:hover {
-//     opacity: 0.7
-// }
-// }

@@ -628,6 +628,19 @@ transition: all 1s cubic-bezier(0, 0, 0.13, 0.79);
 opacity: 1;
 transform: translateY(0);
 }
+
+@include media(md) {
+    .works__img:hover img {
+        transform: none;
+    }
+    .works__img:hover p.caption {
+        opacity: 0;
+    }
+    .works .works__img:hover .mask::before {
+        display: none;
+    }
+}
+
 /* ------------
 skill
 ------------- */   

@@ -141,7 +141,17 @@ worksページ
         background: rgba(255, 255, 255, 0.7);
     }
 }
-
+@include media(md) {
+    .website__img:hover img {
+        transform: none;
+    }
+    .website__img:hover p.caption {
+        opacity: 0;
+    }
+    .website .website__img:hover .mask::before {
+        display: none;
+    }
+}
 
 /*バナー制作*/
 .banner{
@@ -264,6 +274,18 @@ worksページ
         width: calc(100% - 20px);
         height: calc(100% - 20px);
         background: rgba(255, 255, 255, 0.7);
+    }
+}
+
+@include media(md) {
+    .benner__img:hover img {
+        transform: none;
+    }
+    .banner__img:hover p.caption {
+        opacity: 0;
+    }
+    .banner .banner__img:hover .mask::before {
+        display: none;
     }
 }
 
@@ -403,6 +425,19 @@ worksページ
     }
     
 }
+
+@include media(md) {
+    .graphic__img:hover img {
+        transform: none;
+    }
+    .graphic__img:hover p.caption {
+        opacity: 0;
+    }
+    .graphic .graphic__img:hover .mask::before {
+        display: none;
+    }
+}
+
 
 // .slick-prev slick-arrow{
 //     display: none;
