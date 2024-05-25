@@ -84,19 +84,9 @@ color
   background: rgb(255, 190, 152);
   background: linear-gradient(90deg, rgb(255, 190, 152) 0%, rgb(251, 222, 215) 100%);
 }
-@media screen and (max-width: 767px) {
-  .btn-circle a:hover::before {
-    display: none;
-  }
-}
 .btn-circle a:hover::after {
   border-top: 1px solid #FFFBF9;
   border-right: 1px solid #FFFBF9;
-}
-@media screen and (max-width: 767px) {
-  .btn-circle a:hover::after {
-    display: none;
-  }
 }
 
 /*worksと実績詳細ページの丸ボタンは中央に配置 */
@@ -1676,11 +1666,6 @@ worksページ
   border-radius: 10px;
   transform: scale(1.1); /*拡大の値*/
 }
-@media screen and (max-width: 767px) {
-  .website__img:hover img {
-    display: none;
-  }
-}
 .website__img p.caption {
   position: absolute;
   width: 80%;
@@ -1705,11 +1690,6 @@ worksページ
 .website__img:hover p.caption {
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
-  .website__img:hover p.caption {
-    display: none;
-  }
-}
 .website .website__img:hover .mask::before {
   content: "";
   position: absolute;
@@ -1720,11 +1700,6 @@ worksページ
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   background: rgba(255, 255, 255, 0.7);
-}
-@media screen and (max-width: 767px) {
-  .website .website__img:hover {
-    display: none;
-  }
 }
 
 /*バナー制作*/
@@ -1802,11 +1777,6 @@ worksページ
   border-radius: 10px;
   transform: scale(1.1); /*拡大の値*/
 }
-@media screen and (max-width: 767px) {
-  .banner__img:hover img {
-    display: none;
-  }
-}
 .banner__img p.caption {
   position: absolute;
   width: 80%;
@@ -1831,11 +1801,6 @@ worksページ
 .banner__img:hover p.caption {
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
-  .banner__img:hover p.caption {
-    display: none;
-  }
-}
 .banner .banner__img:hover .mask::before {
   content: "";
   position: absolute;
@@ -1846,11 +1811,6 @@ worksページ
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   background: rgba(255, 255, 255, 0.7);
-}
-@media screen and (max-width: 767px) {
-  .banner .banner__img:hover {
-    display: none;
-  }
 }
 
 /*チラシ・名刺*/
@@ -1928,11 +1888,6 @@ worksページ
   border-radius: 10px;
   transform: scale(1.1); /*拡大の値*/
 }
-@media screen and (max-width: 767px) {
-  .graphic__img:hover img {
-    display: none;
-  }
-}
 .graphic__img p.caption {
   position: absolute;
   width: 80%;
@@ -1957,11 +1912,6 @@ worksページ
 .graphic__img:hover p.caption {
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
-  .graphic__img:hover p.caption {
-    display: none;
-  }
-}
 .graphic .graphic__img:hover .mask::before {
   content: "";
   position: absolute;
@@ -1972,11 +1922,6 @@ worksページ
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   background: rgba(255, 255, 255, 0.7);
-}
-@media screen and (max-width: 767px) {
-  .graphic .graphic__img:hover {
-    display: none;
-  }
 }
 @media screen and (max-width: 767px) {
   .graphic .work__btn {
@@ -2538,7 +2483,7 @@ messageページ
 }
 .message__text .underline {
   text-decoration: underline;
-  text-decoration-color: #DAA180;
+  text-decoration-color: #FFBE98;
 }
 .message__from {
   display: block;

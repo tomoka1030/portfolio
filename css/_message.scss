@@ -107,21 +107,15 @@ messageページ
         .small__text{
             font-size: 13px;
 
-            // @include media(xl){
-            //     font-size: 1.3vw;
-            // }
             
             @include media(md){
                 font-size: 11px;
             }
     
-            // @include media(sm){
-            //     font-size: 2.3vw;
-            // }
         }
         .underline{
             text-decoration: underline;
-            text-decoration-color: variable.$dusty-pink;
+            text-decoration-color: variable.$peach-fuzz;
         }
     }
     &__from{

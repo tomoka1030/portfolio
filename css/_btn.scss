@@ -75,17 +75,11 @@
     &:hover::before {
         background: rgb(255,190,152);
         background: linear-gradient(90deg, rgba(255,190,152,1) 0%, rgba(251,222,215,1) 100%);
-        @include media(md){
-            display: none;
-        }
     }
 
     &:hover::after {
         border-top: 1px solid variable.$cream-beige ;
         border-right: 1px solid variable.$cream-beige;
-        @include media(md){
-            display: none;
-        }
     }
     }
 }
