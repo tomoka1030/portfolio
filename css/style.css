@@ -390,16 +390,6 @@ img {
     display: none;
   }
 }
-@media (hover: hover) and (pointer: fine) {
-  a:hover {
-    opacity: 0.7;
-  }
-}
-@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  a:hover {
-    opacity: 0.7;
-  }
-}
 /* ------------
 全ページ共通のcss
 // ------------- */
