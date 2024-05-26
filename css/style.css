@@ -917,11 +917,8 @@ body {
   position: fixed;
   top: -120%;
   right: 0;
-  z-index: -1;
-  /*高さと幅*/
   display: block;
   text-align: center;
-  transition: 0.3s;
 }
 
 #header.done.panelactive .header__nav {
