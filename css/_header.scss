@@ -33,8 +33,6 @@
         }
     }
 
-
-
     &__logo{
         img {
             width: 148px;
@@ -199,12 +197,6 @@
     }
 }
 
-
-// /*.doneクラスがついたヘッダー*/
-// #header.done {
-//     opacity: 1; /*透過0にして非表示に*/
-// }
-
 /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
 #header.done.panelactive {
     opacity: 1; /*不透明にして出現*/
@@ -219,7 +211,6 @@
     position: fixed;
     top: -120%;
     right: 0;
-
     display: block;
     text-align: center; 
 }
@@ -233,10 +224,11 @@
     padding-top: 70px;
     padding-bottom: 52px;
     opacity: 1; // 不透明に
+    visibility: visible;
     z-index: 3; // 最前面に
     background: rgba(255,229,213,0.9);
     border-radius: 0px 0px 20px 20px;
-    transition: 0.7s;
+    transition: all 0.7s;
 
     @include media(xl){
         width: 100%;
@@ -247,9 +239,6 @@
 
     ul {
         display: block;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
     }
 
     li {
@@ -258,7 +247,6 @@
     }
 
     .header__item-logo{
-        // margin-top: 65px;
         opacity: 1;
         margin-bottom: 40px;
         img{
@@ -292,6 +280,3 @@
     }
 
 }
-
-
-

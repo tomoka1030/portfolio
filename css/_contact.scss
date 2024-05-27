@@ -89,6 +89,7 @@ contact ページ
 
             @include media(md){
                 width: 94%;
+                font-size: 16px;
             }
 
             &:focus {
@@ -109,6 +110,7 @@ contact ページ
 
         @include media(md){
             width: 90%;
+            font-size: 16px;
         }
 
         &:focus {
