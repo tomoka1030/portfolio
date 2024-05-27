@@ -142,7 +142,7 @@ color
 @media screen and (max-width: 767px) {
   .page__link .page__item a {
     width: 100%;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
     font-size: 15px;
   }
 }
@@ -225,8 +225,8 @@ color
   width: 7px;
   height: 7px;
   border: 0;
-  border-top: solid 1px #DAA180;
-  border-right: solid 1px #DAA180;
+  border-top: solid 1px #FFBE98;
+  border-right: solid 1px #FFBE98;
   transform: rotate(45deg);
   position: absolute;
   top: 0;
@@ -236,7 +236,7 @@ color
   transition: 0.3s;
 }
 .btn-arrow:hover {
-  color: #DAA180;
+  color: #FFBE98;
 }
 
 /*問い合わせフォームへのリンクボタン */
@@ -300,7 +300,14 @@ color
   background: #FFFBF9;
   color: #5E2F2A;
   font-family: "fot-tsukuardgothic-std", sans-serif, "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-size: 15px;
   font-weight: 100;
+}
+@media screen and (max-width: 767px) {
+  .inquire .btn__area .submit-btn {
+    margin-top: 40px;
+    height: 44px;
+  }
 }
 .inquire .btn__area .submit-btn .send__img {
   width: 17px;
@@ -725,7 +732,7 @@ body {
 @keyframes fadeUpAnime {
   from {
     opacity: 0;
-    transform: translate3d(0px, 40px, 0px);
+    transform: translate3d(0px, 30px, 0px);
   }
   to {
     opacity: 1;
@@ -771,8 +778,7 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .header__logo img {
-    width: 125px;
-    padding-top: 5px;
+    width: 121px;
     position: relative;
     z-index: 99;
   }
@@ -826,13 +832,13 @@ body {
   display: none;
   /*ボタンの位置*/
   position: fixed;
-  top: 20px;
-  right: 30px;
+  top: 17px;
+  right: 24px;
   z-index: 999;
   /*ボタンの形状*/
   cursor: pointer;
-  width: 34px;
-  height: 21px;
+  width: 32px;
+  height: 17px;
   transition: all 1s;
 }
 .menu_btn span {
@@ -847,7 +853,7 @@ body {
   top: 0px;
 }
 .menu_btn span:nth-of-type(2) {
-  top: 10px;
+  top: 8px;
 }
 .menu_btn span:nth-of-type(3) {
   bottom: 0px;
@@ -855,16 +861,19 @@ body {
 @media screen and (max-width: 1000px) {
   .menu_btn {
     display: block;
-    top: 16px;
+    top: 18px;
+    right: 20px;
   }
 }
 
 .menu_btn::after {
   content: "MENU";
   position: absolute;
+  left: -1px;
+  bottom: -18px;
   font-size: 11px;
   font-family: "Julius Sans One", sans-serif;
-  bottom: -20px;
+  letter-spacing: 1.5;
 }
 
 .menu_btn.active::after {
@@ -872,16 +881,17 @@ body {
   left: -2px;
   font-size: 11px;
   font-family: "Julius Sans One", sans-serif;
+  letter-spacing: 1.5;
 }
 
 .menu_btn.active span:nth-of-type(1) {
-  transform: translateY(10px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 .menu_btn.active span:nth-of-type(2) {
   opacity: 0;
 }
 .menu_btn.active span:nth-of-type(3) {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
@@ -950,7 +960,7 @@ body {
 }
 #header.done.panelactive .header__nav .header__item-logo {
   opacity: 1;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 #header.done.panelactive .header__nav .header__item-logo img {
   width: 96px;
@@ -1225,7 +1235,7 @@ contact ページ
 @media screen and (max-width: 767px) {
   .inquire__title {
     margin-bottom: 39px;
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 .inquire__img {
@@ -1251,6 +1261,9 @@ contact ページ
   .inquire__message {
     font-size: 14px;
   }
+}
+.inquire form {
+  width: 100%;
 }
 .inquire__item {
   display: block;
@@ -1609,6 +1622,7 @@ worksページ
 }
 @media screen and (max-width: 767px) {
   .website .section__title {
+    padding-left: 11%;
     font-size: 20px;
   }
 }
@@ -1733,7 +1747,7 @@ worksページ
 }
 .banner .section__title {
   margin-bottom: 0;
-  padding-left: 12%;
+  padding-left: 8%;
   font-size: 33px;
   font-weight: bold;
   color: #DAA180;
@@ -1741,6 +1755,7 @@ worksページ
 @media screen and (max-width: 767px) {
   .banner .section__title {
     font-size: 20px;
+    padding-left: 11%;
   }
 }
 .banner .section__title::before {
@@ -1855,13 +1870,14 @@ worksページ
 }
 .graphic .section__title {
   margin-bottom: 0;
-  padding-left: 12%;
+  padding-left: 8%;
   font-size: 33px;
   font-weight: bold;
   color: #DAA180;
 }
 @media screen and (max-width: 767px) {
   .graphic .section__title {
+    padding-left: 11%;
     font-size: 20px;
   }
 }
@@ -2174,6 +2190,7 @@ works/下層ページ
 }
 .work__desc dl dt {
   position: relative;
+  display: inline-block;
   text-align: center;
   width: 107px;
   font-size: 15px;
@@ -2181,7 +2198,12 @@ works/下層ページ
 }
 @media screen and (max-width: 870px) {
   .work__desc dl dt {
-    width: 80px;
+    width: 90px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .work__desc dl dt {
+    width: 100px;
   }
 }
 .work__desc dl dt::before, .work__desc dl dt::after {
@@ -2204,9 +2226,24 @@ works/下層ページ
   top: 0;
   right: 0;
 }
-@media screen and (max-width: 767px) {
-  .work__desc dl dt {
-    width: 100px;
+.work__desc dl dt .top {
+  display: block;
+  text-align: left;
+  padding-left: 15px;
+}
+@media screen and (max-width: 870px) {
+  .work__desc dl dt .top {
+    padding-left: 10px;
+  }
+}
+.work__desc dl dt .bottom {
+  display: block;
+  text-align: left;
+  padding-left: 15px;
+}
+@media screen and (max-width: 870px) {
+  .work__desc dl dt .bottom {
+    padding-left: 10px;
   }
 }
 .work__desc dl dd {
@@ -2325,6 +2362,16 @@ works/下層ページ
   margin: 0 auto;
   padding-top: 102px;
   width: 71%;
+}
+@media screen and (max-width: 767px) {
+  .logo__img {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .logo__img {
+    width: 60%;
+  }
 }
 .logo__img img {
   width: 100%;
@@ -2965,8 +3012,8 @@ messageページ
 }
 .introduction .section__title {
   display: inline-block;
-  margin-left: 46px;
-  padding: 10px;
+  margin-left: 21px;
+  padding: 8px;
   border-bottom: 4px dotted #FFBE98;
   font-size: 30px;
   font-weight: bold;
@@ -3014,7 +3061,7 @@ messageページ
 }
 @media screen and (max-width: 767px) {
   .introduction__img {
-    width: 76%;
+    width: 70%;
   }
 }
 .introduction__img img {
@@ -3022,7 +3069,9 @@ messageページ
 }
 @media screen and (max-width: 767px) {
   .introduction__textarea {
-    padding: 63px 20px 0 20px;
+    padding-top: 63px;
+    width: 85%;
+    margin: 0 auto;
   }
 }
 .introduction__text {
@@ -3099,7 +3148,7 @@ messageページ
 }
 .history__title {
   margin-top: 40px;
-  margin-left: 80px;
+  margin-left: 45px;
   position: relative;
 }
 @media screen and (max-width: 767px) {
@@ -3155,13 +3204,13 @@ messageページ
 }
 
 .timeline {
+  width: 90%;
   margin: 50px auto;
-  padding: 0 30px;
 }
 .timeline li {
   position: relative;
   list-style: none;
-  padding: 0 0 32px 0;
+  padding-bottom: 32px;
 }
 .timeline li dl {
   margin: 0 0 10px 3em;
@@ -3172,8 +3221,10 @@ messageページ
 }
 .timeline li .border-line {
   position: absolute;
-  left: 0.2em;
+  margin-top: 3px;
+  left: 0;
   top: 0;
+  transform: translateX(13px);
   width: 1px;
   height: 0;
   background: #FFBE98;
@@ -3181,8 +3232,10 @@ messageページ
 .timeline li::after {
   content: "";
   position: absolute;
+  margin-top: 3px;
   top: 0;
   left: 0;
+  transform: translateX(10px);
   width: 7px;
   height: 7px;
   background: #FFBE98;
@@ -3206,6 +3259,7 @@ messageページ
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #FFFCF5;
   background: linear-gradient(180deg, #FFFCF5 0%, rgba(255, 252, 245, 0.6) 100%);
 }
 .loading .is-active {
@@ -3292,7 +3346,7 @@ messageページ
 }
 
 /* ---------------
-  Topページ/fv
+    Topページ/fv
 ----------------- */
 .fv {
   position: relative;
@@ -3437,7 +3491,6 @@ messageページ
   display: inline-block;
   margin: 0 auto;
   color: #5E2F2A;
-  padding: 8px;
   margin-bottom: 10px;
 }
 
@@ -3491,7 +3544,7 @@ messageページ
 }
 .fv__inner.done.panelactive .fv__nav .fv__item-logo {
   padding-top: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   margin: 0 auto;
   opacity: 1;
 }
@@ -3677,6 +3730,12 @@ works
   padding-right: 1vw;
   padding-left: 1vw;
 }
+@media screen and (max-width: 767px) {
+  .works__inner {
+    padding-right: 4.26vw;
+    padding-left: 4.26vw;
+  }
+}
 .works__list {
   display: flex;
   justify-content: space-between;
@@ -3684,6 +3743,8 @@ works
 @media screen and (max-width: 767px) {
   .works__list {
     display: block;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 .works__item {
@@ -3817,8 +3878,12 @@ skill
 }
 @media screen and (max-width: 767px) {
   .skill__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
     width: 100%;
-    margin: 0 auto;
+    max-width: 300px;
+    margin: 20px auto 0;
     justify-content: center;
     margin-bottom: 0;
   }
@@ -3826,16 +3891,15 @@ skill
 .skill__item {
   position: relative;
   display: inline-block;
-  width: 141px;
-  height: 141px;
+  width: 140px;
+  height: 140px;
   margin-left: 3%;
   background-color: #FFFBF9;
   border-radius: 48% 52% 56% 44%/50% 52% 48% 50%;
 }
 @media screen and (max-width: 767px) {
   .skill__item {
-    margin-left: 5%;
-    margin-bottom: 25px;
+    margin: 0;
   }
 }
 .skill__content {

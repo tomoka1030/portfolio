@@ -21,14 +21,8 @@ messageページ
         display: block;
         width: 45%;
         margin: 0 auto;
-        // padding-top: 3.2rem;
-        // padding-bottom: 3.2rem;
-        // padding-right: 6vw;
-        // padding-left: 6vw;
         padding: 6vw;
         border-radius: 10px;
-        // max-width: variable.$width-inner;
-        // background: #FFF7EF;
 
         @include media(md){
             width: 50%;
@@ -168,10 +162,6 @@ messageページ
     transform: rotate(-45deg);
     }
 }
-
-
-
-
 
 /*悩み*/
 .worry{
@@ -575,8 +565,8 @@ messageページ
 
     .section__title{
         display: inline-block;
-        margin-left: 46px;
-        padding: 10px;
+        margin-left: 21px;
+        padding: 8px;
         border-bottom: 4px dotted variable.$peach-fuzz;
         font-size: 30px;
         font-weight: bold;
@@ -621,7 +611,7 @@ messageページ
             width: 43vw;
         }
         @include media(md){
-            width: 76%;
+            width: 70%;
         }
     }
 
@@ -631,7 +621,10 @@ messageページ
 
     &__textarea{
         @include media(md){
-            padding: 63px 20px 0 20px;
+            padding-top: 63px;
+            width: 85%;
+            margin: 0 auto;
+            
         }
     }
 
@@ -710,7 +703,7 @@ messageページ
 
     &__title {
         margin-top: 40px;
-        margin-left: 80px;
+        margin-left: 45px;
         position: relative;
 
         @include media(md){
@@ -771,14 +764,14 @@ messageページ
 }
 
 .timeline {
+    width: 90%;
     margin: 50px auto;
-    padding: 0 30px;
 
     li {
         // 線の起点とするためrelativeを設定
         position: relative;
         list-style: none;
-        padding: 0 0 32px 0;
+        padding-bottom: 32px;
 
         dl {
             margin: 0 0 10px 3em;
@@ -793,8 +786,10 @@ messageページ
         .border-line {
             // 線の位置
             position: absolute;
-            left: 0.2em;
+            margin-top: 3px;
+            left: 0;
             top: 0;
+            transform: translateX(13px);
             width: 1px; // 線の太さ
             height: 0; // はじめは高さを0に
             background: variable.$peach-fuzz;
@@ -804,8 +799,10 @@ messageページ
         &::after {
             content: "";
             position: absolute;
+            margin-top: 3px;
             top: 0;
             left: 0;
+            transform: translateX(10px);
             width: 7px;
             height: 7px;
             background: variable.$peach-fuzz;

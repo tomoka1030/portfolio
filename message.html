@@ -114,10 +114,11 @@
         <div id="message" class="message">
             <div class="text__wrapper">
                 <div class="message__inner">
-                    <p class="message__title">「優しく、温かく、行き届く」</p>
-                    <p class="message__subtitle">思い描く未来と、その先へ</p>
-                    <p class="message__text">数あるページの中から<br class="spOnly">ご覧いただきありがとうございます！<br>
+                    <p class="message__title fadeUpTrigger">「優しく、温かく、行き届く」</p>
+                    <p class="message__subtitle fadeUpTrigger">思い描く未来と、その先へ</p>
+                    <p class="message__text fadeUpTrigger">数あるページの中から<br class="spOnly">ご覧いただきありがとうございます！<br>
                         デザイナーのTomoです。<br>
+                        <br>
                         新しいことをする上で、<br class="spOnly">
                         不安や悩みはつきものですよね。<br>
                         あなたに寄り添い、思いを汲み取り、<br class="spOnly">
@@ -293,6 +294,14 @@
 
                             <li>
                                 <dl>
+                                    <dt>結婚、第一子出産。<br class="spOnly">家族には、もふもふの猫ちゃんも。</dt>
+                                    <dd>子育てはバタバタと慌ただしくも充実した毎日！</dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+
+                            <li>
+                                <dl>
                                     <dt>Webデザインスクールに通い、デザインとコーディングスキルを高める。</dt>
                                     <dd>実践的な課題や、プロの先生によるサポートのおかげで、当サイトを作り上げるまで成長！</dd>
                                 </dl>
@@ -341,7 +350,7 @@
                         <img class="contact__img" src="images/e-mail.png" alt="e-mail">
                     </a>
                 </p>
-                <p class="contact__text">お仕事のご依頼や、<br class="spOnly">
+                <p class="contact__text fadeUpTrigger">お仕事のご依頼や、<br class="spOnly">
                     こんなことできるかなといった疑問、<br>
                     こんなこと一緒にやらない？<br class="spOnly">
                     などのお誘いなど、何でもお気軽にどうぞ！
@@ -459,9 +468,7 @@
                 }
             });
         });
-    </script>
 
-    <script>
         /* -------------------------------------
         スクロールするとタイムラインの縦線がのびる
         ---------------------------------------- */
@@ -471,7 +478,7 @@
                 var elemPos = $(this).offset().top;// 上からの高さ取得
                 var scroll = $(window).scrollTop();// スクロール値取得
                 var windowHeight = $(window).height();// windowの高さ取得
-                var startPoint = 130; //線をスタートさせる位置を指定※レイアウトによって調整してください
+                var startPoint = 120; //線をスタートさせる位置を指定※レイアウトによって調整してください
                 if (scroll >= elemPos - windowHeight - startPoint) {
                     var H = $(this).outerHeight(true)//liの余白と高さを含めた数値を取得
                     //スクロール値から要素までの高さを引いた値を、liの高さの半分のパーセントで出す
@@ -495,83 +502,6 @@
         });
 
     </script>
-
-    <script>
-        /* -------------------------------------
-        スクロールすると子要素が時間差ででてくる
-        ---------------------------------------- */
-        // スクロール出現用関数（.offs ⇄ .ons）
-        function scr_ani(scr, offs_max) {
-            var
-                window_h = $(window).height(),
-                offs_length = $('.offs').length,
-                ons_length = $('.ons').length,
-                wh_pos = 20;// 対象コンテンツの上端が画面下からどれくらい入ったら反応するか。画面高さに対する割合（%）
-            if (offs_length) {
-                var first_item = offs_max - offs_length;
-                for (var i = 0; i < offs_length; i++) {
-                    var data_scr = first_item + i;
-                    var offs = $('.offs[data-scr="' + data_scr + '"]');
-                    var target = offs.offset().top;
-                    var trigger = target - (window_h + scr - window_h * wh_pos / 100);
-                    if (trigger < 0) {
-                        offs.removeClass('offs').addClass('ons');
-                    } else {
-                        break;
-                    }
-                }
-            }
-            if (ons_length) {
-                var last_item = ons_length - 1;
-                for (var i = 0; i < ons_length; i++) {
-                    var data_scr = last_item - i;
-                    var ons = $('.ons[data-scr="' + data_scr + '"]');
-                    var target = ons.offset().top;
-                    var trigger = target - (window_h + scr);
-                    if (trigger > 0) {
-                        ons.removeClass('ons').addClass('offs');
-                    } else {
-                        break;
-                    }
-                }
-            }
-        };
-    </script>
-
-    <script>
-        $(function () {
-
-            // スクロール出現アイテムにナンバリング
-            var offs_max = $('.offs').length;
-            for (var i = 0; i < offs_max; i++) {
-                $('.offs').eq(i).attr('data-scr', i);
-            }
-            // ディレイを設定
-            function setDelay(items) {
-                for (var i = 0; i < items.length; i++) {
-                    let delay = items.eq(i).data('delay');
-                    if (delay) {
-                        items.eq(i).css('transition-delay', delay + 's');
-                    }
-                }
-            }
-
-            // ディレイを設定
-            setDelay($('.feature__item'));
-
-            // （リロード時など）ロード時にすでにスクロールされている場合に対応
-            var scr = $(window).scrollTop();
-            scr_ani(scr, offs_max);
-
-
-            // スクロール時
-            $(window).on('scroll', function () {
-                var scr = $(window).scrollTop();
-                scr_ani(scr, offs_max);
-            });
-        });
-    </script>
-
     <script src="js/script.js"></script>
 </body>
 

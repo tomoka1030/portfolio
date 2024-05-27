@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FFFCF5;
     background: linear-gradient(180deg, #FFFCF5 0%, rgba(255, 252, 245, 0.6) 100%);
 
 
@@ -114,7 +115,7 @@
 }
 
 /* ---------------
-  Topページ/fv
+    Topページ/fv
 ----------------- */
 
 .fv{
@@ -184,16 +185,15 @@
     } 
 
     &__inner {
-    position: absolute;
-    text-align: left;  
-    top: 0;
-    width: 172px;
-    padding-top: 60px;
-    margin-left: 8%;
-    @include media(xl){
-        // padding: 0 17px;
-        display: none;
-    }
+        position: absolute;
+        text-align: left;  
+        top: 0;
+        width: 172px;
+        padding-top: 60px;
+        margin-left: 8%;
+        @include media(xl){
+            display: none;
+        }
     }
 
     &__item-logo {
@@ -209,31 +209,29 @@
             border-radius: 40px;
             }
         }
-        }
+    }
     
     &__item{
-            a{
-                display: inline-block;
-                // width: 90px;
-                line-height:1.5;
-                padding: 8px;
-            &:hover {
-                // width: 100%;
-                background: rgba(255, 244, 238, 0.5);
-                box-shadow: 1px 1px 30px #FFF4EE;
-                border-radius: 26px;
-                }
+        a{
+            display: inline-block;
+            line-height:1.5;
+            padding: 8px;
+        &:hover {
+            background: rgba(255, 244, 238, 0.5);
+            box-shadow: 1px 1px 30px #FFF4EE;
+            border-radius: 26px;
             }
         }
+    }
 
     &__title-ja{
-    font-size: 11px; 
-    letter-spacing: 0.2em;
+        font-size: 11px; 
+        letter-spacing: 0.2em;
     }
 
     &__title{
-    font-size: 18px;
-    font-family: variable.$ff-en; 
+        font-size: 18px;
+        font-family: variable.$ff-en; 
     }
 
     &__sns{
@@ -277,7 +275,6 @@
                 display: inline-block;
                 margin: 0 auto;
                 color: variable.$text-color;
-                padding: 8px;
                 margin-bottom: 10px;
             }
         }
@@ -337,7 +334,7 @@
 
     .fv__item-logo{
         padding-top: 70px;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
         margin: 0 auto;
         opacity: 1;
         img{
@@ -408,7 +405,6 @@ section {
 
     &__img{
     position: relative;
-    // width: 30%;
     width: 19vw;
         @include media(md){
             display: none;
@@ -516,7 +512,12 @@ works
         margin: 0 auto;
         padding-right: 1vw;
         padding-left: 1vw;
+
+        @include media(md){
+            padding-right: 4.26vw;
+            padding-left: 4.26vw;
         }
+    }
 
     &__list{
         display: flex;
@@ -524,6 +525,8 @@ works
 
         @include media(md){
             display: block;
+            width: 90%;
+            margin: 0 auto;
         }
     }
 
@@ -534,6 +537,7 @@ works
             margin-bottom: 39px;
         }
     }
+
     &__img{
         position: relative; 
         border-radius: 10px;
@@ -586,7 +590,7 @@ works
 
         &:hover p.caption{
             opacity:1;
-            }
+        }
     }
 
     .works__img:hover .mask::before{
@@ -617,6 +621,7 @@ works
         border-radius: 32px;
     }   
 }
+
 .works__item.offs,.offs .works__item{
     opacity: 0;
     transform: translateY(50px);
@@ -653,11 +658,11 @@ skill
         padding-left: 1vw;
         margin: 0 auto;
         
-            @include media(md){
-                padding-right: 4.26vw;
-                padding-left: 4.26vw;
-            }
+        @include media(md){
+            padding-right: 4.26vw;
+            padding-left: 4.26vw;
         }
+    }
 
     &__list{
         flex-wrap: wrap;
@@ -665,26 +670,28 @@ skill
         margin-bottom:50px;
 
         @include media(md){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);    // 縦2列
+            gap: 25px;
             width: 100%;
-            margin: 0 auto;
+            max-width: 300px;
+            margin: 20px auto 0;
             justify-content: center;
             margin-bottom: 0;
         }
-        }
-    
+    }
 
     &__item{
         position: relative;
         display: inline-block;
-        width: 141px;
-        height: 141px;
+        width: 140px;
+        height: 140px;
         margin-left: 3%;
         background-color: variable.$cream-beige;
         border-radius: 48% 52% 56% 44% / 50% 52% 48% 50% ;
 
         @include media(md){
-            margin-left:5%;
-            margin-bottom: 25px;
+            margin: 0;
         }
     }
 
@@ -694,18 +701,18 @@ skill
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%)
-        }
+    }
     
     &__img {
             width: 44px;
             margin: 0 auto;
-        }
+    }
 
     &__caption{
         text-align: center;
         margin-top: 8px;
         font-size: 15px;
-        }
+    }
 }
 
 .skill__item.offs,.offs .skill__item{

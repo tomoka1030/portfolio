@@ -137,7 +137,7 @@
 
             @include media(md){
                 width: 100%;
-                margin-bottom: 27px;
+                margin-bottom: 30px;
                 font-size: 15px;
             }
 
@@ -225,8 +225,8 @@
         width: 7px;
         height: 7px;
         border: 0;
-        border-top: solid 1px variable.$dusty-pink;
-        border-right: solid 1px variable.$dusty-pink;
+        border-top: solid 1px variable.$peach-fuzz;
+        border-right: solid 1px variable.$peach-fuzz;
         transform: rotate(45deg);
         position: absolute;
         top: 0;
@@ -237,7 +237,7 @@
         }
 
     &:hover{
-        color: variable.$dusty-pink;
+        color: variable.$peach-fuzz;
         }
     }
 
@@ -310,7 +310,13 @@
         background: variable.$cream-beige;
         color: variable.$text-color;
         font-family: variable.$ff-gothic;
+        font-size: 15px;
         font-weight: 100;
+
+        @include media(md){
+            margin-top: 40px;
+            height: 44px;
+        }
 
     .send__img {
         width: 17px;
