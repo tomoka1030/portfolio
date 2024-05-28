@@ -86,7 +86,7 @@
 
 /*worksと実績詳細ページの丸ボタンは中央に配置 */
 .graphic .btn-circle, .work .btn-circle{
-    margin-top: 130px;
+    margin-top: 140px;
     text-align: center;
     padding-right: 1px;
     justify-content: center;
@@ -137,7 +137,7 @@
 
             @include media(md){
                 width: 100%;
-                margin-bottom: 30px;
+                margin-bottom: 38px;
                 font-size: 15px;
             }
 

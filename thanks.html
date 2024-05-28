@@ -192,12 +192,13 @@
         ふわっとページ遷移
         ---------------- */
 
-        $(function () {
-            $('body').fadeIn(1000); //1秒かけてフェードイン
-        });
-    </script>
+        // $(function () {
+        //     $('body').fadeIn(1000); //1秒かけてフェードイン
+        // });
 
-    <script>
+        /* --------------
+        ハンバーガーメニュー
+        ---------------- */
         $(function () {
             // 初回ロード時に#headerにdoneクラスを付与
             $('#header').addClass('done');
@@ -213,8 +214,18 @@
                 $("#header").removeClass('panelactive'); // ヘッダーのpanelactiveクラスも除去
             });
         });
-    </script>
-    <script>
+
+        $(document).on("click", function (event) {
+            if (!$(event.target).closest(".header__nav, .menu_btn").length && $(".menu_btn").hasClass("active")) {
+                $(".menu_btn").removeClass("active");
+                $("#header").removeClass("panelactive");
+            }
+        });
+
+
+        /* --------------
+        フェードイン
+        ---------------- */
         // 動きのきっかけの起点となるアニメーションの名前を定義
         function fadeAnime() {
             // ふわっ

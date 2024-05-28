@@ -178,6 +178,8 @@
 
 /*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
 .fadeDown {
+    margin-top: 10px;
+    margin-right: 5px;
     animation-name: fadeDownAnime;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -197,6 +199,11 @@
     }
 }
 
+/*.doneクラスがついたヘッダー*/
+// #header.dnone {
+//     opacity: 0;/*透過0にして非表示に*/
+// }
+
 /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
 #header.done.panelactive {
     opacity: 1; /*不透明にして出現*/
@@ -213,6 +220,7 @@
     right: 0;
     display: block;
     text-align: center; 
+    // transition: 0.7s;
 }
 
 //   *メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
@@ -228,7 +236,7 @@
     z-index: 3; // 最前面に
     background: rgba(255,229,213,0.9);
     border-radius: 0px 0px 20px 20px;
-    transition: all 0.7s;
+    transition: 0.7s;
 
     @include media(xl){
         width: 100%;

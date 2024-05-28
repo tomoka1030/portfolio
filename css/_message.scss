@@ -469,19 +469,19 @@ messageページ
         font-family: "futura-pt", sans-serif;
         font-weight: 400;
         font-style: normal;
-        color: variable.$dusty-pink;
+        color: variable.$peach-fuzz;
         // 左右に横線
         &::before,&::after {
-            background-color: variable.$dusty-pink; /* 横線の色 */
+            background-color: variable.$peach-fuzz; /* 横線の色 */
             content: "";
-            height: 1px; /* 横線の高さ */
+            height: 2px; /* 横線の高さ */
             width: 8px; /* 横線の長さ */
         }
         &::before {
-            margin-right: 8px; /* 文字との余白 */
+            margin-right: 7px; /* 文字との余白 */
         }
         &::after {
-            margin-left: 8px; /* 文字との余白 */
+            margin-left: 7px; /* 文字との余白 */
         }
     }
     
@@ -566,9 +566,10 @@ messageページ
     .section__title{
         display: inline-block;
         margin-left: 21px;
-        padding: 8px;
+        padding: 8px 8px 12px 8px;
         border-bottom: 4px dotted variable.$peach-fuzz;
         font-size: 30px;
+        letter-spacing: 0.08em;
         font-weight: bold;
         color: variable.$dusty-pink;
 
@@ -703,7 +704,7 @@ messageページ
 
     &__title {
         margin-top: 40px;
-        margin-left: 45px;
+        margin-left: 30px;
         position: relative;
 
         @include media(md){

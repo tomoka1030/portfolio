@@ -9,9 +9,9 @@
 //   outline: 2px solid blue;
 // }
 
-body {
-  display: none;
-}
+// body {
+//   display: none;
+// }
 
 .spOnly{
   display: none;
@@ -41,13 +41,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20rem;
-  // min-height: calc(100svh - 120px);
-  // min-height: 42svh;
+  height: 23rem;
 
   @include media(xl){
-    // min-height: calc(100svh - 63px);
-    // top: 63px;
     margin-top: 63px;
     height: 15rem;
   }
@@ -200,9 +196,10 @@ body{
     display: inline-block;
     width: 150px;
     height: 3px;
-    background: variable.$pink-beige;
-    margin: 0;
+    margin: 0;border-radius: 10px;
+
     cursor: pointer;
+    background: variable.$pink-beige;
 
     @include media(lg){
       width: 130px;
@@ -296,12 +293,12 @@ body{
 }
 
 .contact{
-  padding-top: 170px;
+  padding-top: 287px;
   padding-bottom: 132px;
   background: linear-gradient(0deg, rgba(255,219,196,1) 0%, rgba(255,219,196,0) 100%);
   
   @include media(md){
-    padding-top: 200px;
+    padding-top: 300px;
   }
 
   &__inner{

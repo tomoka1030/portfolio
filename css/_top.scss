@@ -189,8 +189,8 @@
         text-align: left;  
         top: 0;
         width: 172px;
-        padding-top: 60px;
-        margin-left: 8%;
+        padding-top: 70px;
+        margin-left: 10%;
         @include media(xl){
             display: none;
         }
@@ -242,6 +242,7 @@
         }
         img{
             margin-top: 14px;
+            margin-left: 9px;
             width: 100%;
         }
     }
@@ -288,14 +289,12 @@
     top: -120%;
     right: 0;
     z-index: -1;
-    /*高さと幅*/  
-    // width: 100%;
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center; 
     // opacity: 0;
-    transition: 0.3s;
+    // transition: 0.3s;
 }
 
 //   *メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
@@ -372,6 +371,10 @@
 
     @include media(xl){
         display: block;
+    }
+
+    .fv__sns img{
+        margin-left: 0;
     }
 }
 
@@ -565,10 +568,11 @@ works
             transform: scale(1.1);/*拡大の値*/
             }
 
-        & p.caption{
+        .caption{
             position: absolute;
             width: 80%;
-            opacity:0;
+            margin: 0 auto;
+            opacity: 0;
             transition: .5s ease-in-out;/*移り変わる速さ*/
             z-index:3;/*テキストを前面に出す*/
             top: 50%;
@@ -577,32 +581,29 @@ works
             color: variable.$text-color;
             line-height: 1.5;
 
-            & span.title{
+            .title{
+                display: inline-block;
                 font-size: 18px;
                 border-bottom: 2px solid  variable.$dusty-pink;
-                padding-bottom: 3px;
+                padding-bottom: 1px;
             }
-            & span{
+
+            .subtitle{
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 10px;
                 font-size: 15px;
-                line-height: 1.5;
+            }
+            .text{
+                font-size: 15px;
             }
         }
+        
 
-        &:hover p.caption{
+        &:hover .caption{
             opacity:1;
         }
-    }
-
-    .works__img:hover .mask::before{
-        content:"";
-        position: absolute;
-        border-radius: 10px;
-        z-index:2;
-        top:10px;
-        left:10px;
-        width: calc(100% - 20px);
-        height: calc(100% - 20px);
-        background:rgba(255, 255, 255, 0.7);
     }
 
 
