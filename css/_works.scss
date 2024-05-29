@@ -93,12 +93,12 @@ worksページ
             text-align: center;
             line-height: 0;/*行の高さを0にする*/
             overflow:hidden;/*拡大してはみ出る要素を隠す*/    
-            }   
+        }   
 
         &:hover img{
             border-radius: 10px;
             transform: scale(1.1);/*拡大の値*/
-            }
+        }
 
         .caption{
             position: absolute;
@@ -110,13 +110,14 @@ worksページ
             left: 50%;
             transform: translate(-50%,-50%);
             color: variable.$text-color;
-            line-height: 1.5;
 
             .title{
-                display: block;
-                font-size: 18px;
-                border-bottom: 2px solid  variable.$dusty-pink;
-                padding-bottom: 1px;
+                display: inline-block;
+                font-size: 20px;
+                border-bottom: 2px solid  variable.$peach-fuzz;
+                padding-right: 10px;
+                padding-left: 10px;
+                padding-bottom: 3px;
             }
 
             .subtitle{
@@ -132,9 +133,8 @@ worksページ
             }
         }
 
-        &:hover p.caption{
+        &:hover .caption{
             opacity:1;
-            z-index: 5;
             }
         
     }
@@ -149,6 +149,10 @@ worksページ
         width: calc(100% - 20px);
         height: calc(100% - 20px);
         background: rgba(255, 255, 255, 0.7);
+    }
+
+    a:hover {
+        opacity: 1;
     }
 }
 @include media(md) {
@@ -263,7 +267,9 @@ worksページ
             .title{
                 display: inline-block;
                 font-size: 18px;
-                border-bottom: 2px solid  variable.$dusty-pink;
+                border-bottom: 2px solid  variable.$peach-fuzz;
+                padding-right: 5px;
+                padding-left: 5px;
                 padding-bottom: 1px;
             }
 
@@ -279,9 +285,8 @@ worksページ
             }
         }
 
-        &:hover p.caption{
+        &:hover .caption{
             opacity:1;
-            z-index: 5;
             }
     }
 
@@ -295,6 +300,10 @@ worksページ
         width: calc(100% - 20px);
         height: calc(100% - 20px);
         background: rgba(255, 255, 255, 0.7);
+    }
+
+    a:hover {
+        opacity: 1;
     }
 }
 
@@ -407,7 +416,7 @@ worksページ
             .title{
                 display: inline-block;
                 font-size: 18px;
-                border-bottom: 2px solid  variable.$dusty-pink;
+                border-bottom: 2px solid  variable.$peach-fuzz;
                 padding-bottom: 1px;
             }
 
@@ -454,7 +463,10 @@ worksページ
             padding-right: 14px;
         }
     }
-    
+
+    a:hover {
+        opacity: 1;
+    }
 }
 
 @include media(md) {

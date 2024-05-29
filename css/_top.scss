@@ -570,7 +570,7 @@ works
 
         .caption{
             position: absolute;
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
             opacity: 0;
             transition: .5s ease-in-out;/*移り変わる速さ*/
@@ -584,7 +584,7 @@ works
             .title{
                 display: inline-block;
                 font-size: 18px;
-                border-bottom: 2px solid  variable.$dusty-pink;
+                border-bottom: 2px solid  variable.$peach-fuzz;
                 padding-bottom: 1px;
             }
 
@@ -599,11 +599,10 @@ works
                 font-size: 15px;
             }
         }
-        
 
         &:hover .caption{
             opacity:1;
-        }
+            }
     }
 
 
@@ -620,7 +619,23 @@ works
         background-color: variable.$cream-beige;
         border: 1px solid variable.$peach-fuzz;
         border-radius: 32px;
-    }   
+    }
+
+    .works__img:hover .mask::before{
+        content:"";
+        position: absolute;
+        border-radius: 10px;
+        z-index:2;
+        top:10px;
+        left:10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    a:hover {
+        opacity: 1;
+    }
 }
 
 .works__item.offs,.offs .works__item{

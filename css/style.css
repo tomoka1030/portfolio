@@ -273,6 +273,7 @@ color
 .contact .btn__area .contact-btn:hover {
   border-radius: 10px;
   border: 1px solid #FFBE98;
+  opacity: 1;
 }
 
 /*問い合わせフォームの送信ボタン */
@@ -811,6 +812,7 @@ body {
 }
 .header__title-ja {
   font-size: 11px;
+  letter-spacing: 0.2em;
   display: block;
 }
 .header__title {
@@ -1696,13 +1698,14 @@ worksページ
   left: 50%;
   transform: translate(-50%, -50%);
   color: #5E2F2A;
-  line-height: 1.5;
 }
 .website__img .caption .title {
-  display: block;
-  font-size: 18px;
-  border-bottom: 2px solid #DAA180;
-  padding-bottom: 1px;
+  display: inline-block;
+  font-size: 20px;
+  border-bottom: 2px solid #FFBE98;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 3px;
 }
 .website__img .caption .subtitle {
   display: block;
@@ -1715,9 +1718,8 @@ worksページ
   font-size: 15px;
   line-height: 1.5;
 }
-.website__img:hover p.caption {
+.website__img:hover .caption {
   opacity: 1;
-  z-index: 5;
 }
 .website .website__img:hover .mask::before {
   content: "";
@@ -1729,6 +1731,9 @@ worksページ
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   background: rgba(255, 255, 255, 0.7);
+}
+.website a:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -1834,7 +1839,9 @@ worksページ
 .banner__img .caption .title {
   display: inline-block;
   font-size: 18px;
-  border-bottom: 2px solid #DAA180;
+  border-bottom: 2px solid #FFBE98;
+  padding-right: 5px;
+  padding-left: 5px;
   padding-bottom: 1px;
 }
 .banner__img .caption .subtitle {
@@ -1847,9 +1854,8 @@ worksページ
 .banner__img .caption .text {
   font-size: 15px;
 }
-.banner__img:hover p.caption {
+.banner__img:hover .caption {
   opacity: 1;
-  z-index: 5;
 }
 .banner .banner__img:hover .mask::before {
   content: "";
@@ -1861,6 +1867,9 @@ worksページ
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   background: rgba(255, 255, 255, 0.7);
+}
+.banner a:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -1966,7 +1975,7 @@ worksページ
 .graphic__img .caption .title {
   display: inline-block;
   font-size: 18px;
-  border-bottom: 2px solid #DAA180;
+  border-bottom: 2px solid #FFBE98;
   padding-bottom: 1px;
 }
 .graphic__img .caption .subtitle {
@@ -2007,6 +2016,9 @@ worksページ
     justify-content: end;
     padding-right: 14px;
   }
+}
+.graphic a:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -3814,7 +3826,7 @@ works
 }
 .works__img .caption {
   position: absolute;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   opacity: 0;
   transition: 0.5s ease-in-out; /*移り変わる速さ*/
@@ -3828,7 +3840,7 @@ works
 .works__img .caption .title {
   display: inline-block;
   font-size: 18px;
-  border-bottom: 2px solid #DAA180;
+  border-bottom: 2px solid #FFBE98;
   padding-bottom: 1px;
 }
 .works__img .caption .subtitle {
@@ -3857,6 +3869,20 @@ works
   background-color: #FFFBF9;
   border: 1px solid #FFBE98;
   border-radius: 32px;
+}
+.works .works__img:hover .mask::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background: rgba(255, 255, 255, 0.7);
+}
+.works a:hover {
+  opacity: 1;
 }
 
 .works__item.offs, .offs .works__item {
