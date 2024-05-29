@@ -191,9 +191,15 @@
         width: 172px;
         padding-top: 70px;
         margin-left: 10%;
+
         @include media(xl){
             display: none;
         }
+
+        a:hover {
+            opacity: 0.8;
+        }
+        
     }
 
     &__item-logo {
@@ -460,8 +466,13 @@ section {
     }
 
     &__text{
-        font-size: 1.2vw;
+        font-size: 1.1vw;
         line-height:calc(30 / 16);
+
+
+        @include media(xl){
+            font-size: 1.2vw;
+        }
 
         @include media(lg){
             font-size: 1.4vw;
@@ -688,12 +699,17 @@ skill
         @include media(md){
             display: grid;
             grid-template-columns: repeat(2, 1fr);    // 縦2列
-            gap: 25px;
+            gap: 50px;
             width: 100%;
             max-width: 300px;
-            margin: 20px auto 0;
+            margin: 50px auto 0;
             justify-content: center;
             margin-bottom: 0;
+        }
+
+        @include media(sm){
+            gap: 25px;
+            margin: 20px auto 0;
         }
     }
 

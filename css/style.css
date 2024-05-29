@@ -750,9 +750,6 @@ body {
 .header {
   top: 0px;
 }
-.header a:hover {
-  opacity: 0.5;
-}
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -812,7 +809,6 @@ body {
 }
 .header__title-ja {
   font-size: 11px;
-  letter-spacing: 0.2em;
   display: block;
 }
 .header__title {
@@ -931,6 +927,7 @@ body {
   right: 0;
   display: block;
   text-align: center;
+  transition: 0.7s;
 }
 
 #header.done.panelactive .header__nav {
@@ -3468,6 +3465,9 @@ messageページ
     display: none;
   }
 }
+.fv__inner a:hover {
+  opacity: 0.8;
+}
 .fv__item-logo {
   width: 102px;
   margin-bottom: 49px;
@@ -3714,8 +3714,13 @@ section {
   }
 }
 .lead__text {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   line-height: 1.875;
+}
+@media screen and (max-width: 1000px) {
+  .lead__text {
+    font-size: 1.2vw;
+  }
 }
 @media screen and (max-width: 870px) {
   .lead__text {
@@ -3935,12 +3940,18 @@ skill
   .skill__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 50px;
     width: 100%;
     max-width: 300px;
-    margin: 20px auto 0;
+    margin: 50px auto 0;
     justify-content: center;
     margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 560px) {
+  .skill__list {
+    gap: 25px;
+    margin: 20px auto 0;
   }
 }
 .skill__item {

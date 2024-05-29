@@ -9,11 +9,6 @@
 -------- */
 .header {
     top: 0px;
-    a:hover {
-        opacity: 0.5;
-        }
-    // width: 100%;
-    // position: fixed; 
 
     &__inner {
         display: flex;
@@ -80,7 +75,6 @@
 
     &__title-ja {
         font-size: 11px; 
-        letter-spacing: 0.2em;
         display: block;
     }
 
@@ -221,7 +215,7 @@
     right: 0;
     display: block;
     text-align: center; 
-    // transition: 0.7s;
+    transition: 0.7s;
 }
 
 //   *メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
