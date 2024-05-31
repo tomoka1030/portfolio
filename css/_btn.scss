@@ -48,7 +48,8 @@
         border-radius: 50vh;
         background: #FFFDFA;
         border: 1px solid variable.$peach-fuzz;
-        transition: 0.3s;
+        transition: none;
+        
         @include media(lg){
             width: 46px;
             height: 46px;
@@ -258,7 +259,7 @@
         box-sizing: border-box;
         margin-top: 36px;
         border-radius: 10px;
-        border: 1px solid variable.$pink-beige;
+        border: 2px solid variable.$pink-beige;
         background: variable.$cream-beige;
         cursor: pointer;
 

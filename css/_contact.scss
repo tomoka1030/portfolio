@@ -55,7 +55,7 @@ contact ページ
 
     &__message{
         text-align: center;
-        line-height: 1.5;
+        line-height: 1.6;
         margin-bottom: 80px;
 
         @include media(md){
@@ -122,6 +122,6 @@ contact ページ
 
 .gradientBackground{
     width: 100%;
-    height: 150px;
+    height: 250px;
     background: linear-gradient(0deg, rgba(255,219,196,1) 0%, rgba(255,219,196,0) 100%);
 }

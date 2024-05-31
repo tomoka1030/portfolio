@@ -594,6 +594,7 @@ works/下層ページ
         display: flex;
         justify-content:space-between;        
         align-items: flex-start;
+        padding-right: 20px;
 
         @include media(md){
             display: block;
@@ -727,12 +728,19 @@ works/下層ページ
                     }  
                 }
             }
+
+            .multiLine{
+                @include media(md){
+                    display: flex;
+                    width: 160px;
+                }  
+            }
     
             dd{
                 width: 70%;
                 padding-right: 6%;
                 font-size: 15px;
-                line-height: 1.5;
+                line-height: 1.7;
                 letter-spacing: 0.1em;
 
                 @include media(lg){

@@ -85,7 +85,7 @@
 
     &__body{
         display: block;
-        padding: 0 48px;
+        padding: 0 46px;
     }
     
     &__title{
@@ -137,7 +137,7 @@
     
     &__text{
         margin-top: 12px;
-        line-height: 1.5;
+        line-height: 1.7;
 
         @include media(lg){
             font-size: 15px;
@@ -256,7 +256,7 @@
     &__text{
         padding-top: 13px;
         font-size: 15px;
-        line-height: 1.2;
+        line-height: 1.5;
 
         @include media(md){
             font-size: 15px

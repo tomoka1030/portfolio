@@ -2,6 +2,7 @@
 /* ---------------
 ローディング画面
 ----------------- */
+
 const loadingAreaBeige = document.querySelector('.loading');
 const loadingAreaPeachFuzz = document.querySelector('.loading-screen');
 const loadingText = document.querySelector('.loading__container');
@@ -77,16 +78,20 @@ window.addEventListener('load', () => {
     webStorage();
 });
 
+
 /* --------------
 ふわっとページ遷移
 ---------------- */
 
-// $(function() {
-// 	$('body').fadeIn(1000); //1秒かけてフェードイン
-// });
+$(function() {
+	$('body').fadeIn(1000); //1秒かけてフェードイン
+});
+
+
 /* -------------------------------------
 スクロールするとハンバーガーメニューがフェードイン
 ---------------------------------------- */
+
 function FixedAnime() {
     //fvの高さを取得
     var fvH = $('.fv').outerHeight(true);
@@ -100,7 +105,7 @@ function FixedAnime() {
     }
 }
 
-// 画面をスクロールをしたら動かしたい場合の記述
+// 画面をスクロールをしたら動かす
 $(window).scroll(function () {
     if (window.matchMedia('(min-width: 1001px)').matches) {
         FixedAnime();
@@ -123,6 +128,7 @@ $(".fv__nav li a").click(function () {//ナビゲーションのリンクがク�
 /* ------------------------------------
 エリア外をクリックした際、メニューを閉じる
 --------------------------------------- */
+
 $(document).on("click", function(event) {
     if (!$(event.target).closest(".header__nav, .menu_btn").length && $(".menu_btn").hasClass("active")) {
         $(".menu_btn").removeClass("active");
@@ -131,10 +137,10 @@ $(document).on("click", function(event) {
 });
 
 
-
 /* -------------------------------------
 スクロールすると子要素が時間差ででてくる
 ---------------------------------------- */
+
 // スクロール出現用関数（.offs ⇄ .ons）
 function scr_ani(scr, offs_max) {
     var
@@ -208,12 +214,9 @@ $(function () {
 });
 
 
-
-
 /* ----------------
 フェードイン
 ------------------- */
-
 
 // // 動きのきっかけとなるアニメーションの名前を定義
 function fadeAnime() {
