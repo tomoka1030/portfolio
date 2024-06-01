@@ -607,6 +607,12 @@ body {
     width: 70px;
   }
 }
+.slick-dots li:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.slick-dots li:last-child {
+  border-radius: 0 10px 10px 0;
+}
 
 .slick-dots .slick-active {
   background: #FFBE98;
@@ -628,10 +634,6 @@ body {
   color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-li.slick-active {
-  border-radius: 10px;
 }
 
 .slick-prev:before,

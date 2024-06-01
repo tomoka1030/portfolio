@@ -197,7 +197,6 @@ body{
     width: 150px;
     height: 3px;
     margin: 0;
-    // border-radius: 10px;
 
     cursor: pointer;
     background: variable.$pink-beige;
@@ -209,10 +208,17 @@ body{
     @include media(md){
       width: 70px;
     }
+
+  &:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+
+  &:last-child {
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .slick-dots .slick-active {
-    // border-radius: 10px;
     background: variable.$peach-fuzz;
     cursor: pointer;
 }
@@ -234,9 +240,9 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-li.slick-active{
-  border-radius: 10px;
-}
+// li.slick-active{
+//   border-radius: 10px;
+// }
 
 .slick-prev:before,
     .slick-next:before {
