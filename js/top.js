@@ -118,24 +118,41 @@ if (window.matchMedia('(max-width: 1000px)').matches) {
 //ボタンをクリックした際のアニメーションの設定
 $(".menu_btn").click(function () {//ボタンがクリックされたら
     $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-    $(".fv__inner").toggleClass('panelactive');//fvにpanelactiveクラスを付与
+    if($('.fv__inner').hasClass('panelactive')){
+        $(".fv__nav").addClass('is-slideup'); //スライドアップするクラスを一時的に付与
+        setTimeout(function(){
+            $(".fv__inner").toggleClass('panelactive');//panelactiveクラスも除去
+            $(".fv__nav").removeClass('is-slideup'); //スライドアップするクラスを削除
+        }, 300);
+    } else {
+        $(".fv__inner").toggleClass('panelactive');//ヘッダーにpanelactiveクラスを付与
+    }
+
 });
 $(".fv__nav li a").click(function () {//ナビゲーションのリンクがクリックされたら
     $(".menu_btn").removeClass('active');//ボタンの activeクラスを除去し
-    $(".fv__inner").removeClass('panelactive');//fvのpanelactiveクラスも除去
+    $(".fv__nav").addClass('is-slideup');
+    setTimeout(function(){
+        $(".fv__inner").toggleClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+        $(".fv__nav").removeClass('is-slideup');
+    }, 300);
 });
+
 
 /* ------------------------------------
 エリア外をクリックした際、メニューを閉じる
 --------------------------------------- */
 
 $(document).on("click", function(event) {
-    if (!$(event.target).closest(".header__nav, .menu_btn").length && $(".menu_btn").hasClass("active")) {
+    if (!$(event.target).closest(".fv__nav, .menu_btn").length && $(".menu_btn").hasClass("active")) {
         $(".menu_btn").removeClass("active");
-        $(".fv__inner").removeClass("panelactive");
+        $(".fv__nav").addClass('is-slideup');
+        setTimeout(function(){
+            $(".fv__inner").toggleClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+            $(".fv__nav").removeClass('is-slideup');
+        }, 300);
     }
 });
-
 
 /* -------------------------------------
 スクロールすると子要素が時間差ででてくる

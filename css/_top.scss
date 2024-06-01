@@ -300,7 +300,7 @@
     align-items: center;
     text-align: center; 
     // opacity: 0;
-    // transition: 0.3s;
+    transition: 0.7s;
 }
 
 //   *メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
@@ -382,6 +382,10 @@
     .fv__sns img{
         margin-left: 0;
     }
+}
+
+.fv__inner .fv__nav.is-slideup {
+    top: -120% !important;
 }
 
 section {

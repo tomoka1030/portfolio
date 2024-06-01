@@ -38,11 +38,24 @@ if (window.matchMedia('(max-width: 1000px)').matches) {
   //ボタンをクリックした際のアニメーションの設定
 $(".menu_btn").click(function () {//ボタンがクリックされたら
     $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+    if($('#header').hasClass('panelactive')){
+        $(".header__nav").addClass('is-slideup'); //スライドアップするクラスを一時的に付与
+        setTimeout(function(){
+            $("#header").toggleClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+            $(".header__nav").removeClass('is-slideup'); //スライドアップするクラスを削除
+        }, 300);
+    } else {
         $("#header").toggleClass('panelactive');//ヘッダーにpanelactiveクラスを付与
+    }
+
 });
 $(".header__nav").click(function () {//ナビゲーションのリンクがクリックされたら
     $(".menu_btn").removeClass('active');//ボタンの activeクラスを除去し
-    $("#header").removeClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+    $(".header__nav").addClass('is-slideup');
+    setTimeout(function(){
+        $("#header").toggleClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+        $(".header__nav").removeClass('is-slideup');
+    }, 300);
 });
 
 
@@ -53,9 +66,14 @@ $(".header__nav").click(function () {//ナビゲーションのリンクがク�
 $(document).on("click", function(event) {
     if (!$(event.target).closest(".header__nav, .menu_btn").length && $(".menu_btn").hasClass("active")) {
         $(".menu_btn").removeClass("active");
-        $("#header").removeClass("panelactive");
+        $(".header__nav").addClass('is-slideup');
+        setTimeout(function(){
+            $("#header").toggleClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+            $(".header__nav").removeClass('is-slideup');
+        }, 300);
     }
 });
+
 
 
 /* ----------
