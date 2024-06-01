@@ -47,7 +47,6 @@ $(".menu_btn").click(function () {//ボタンがクリックされたら
     } else {
         $("#header").toggleClass('panelactive');//ヘッダーにpanelactiveクラスを付与
     }
-
 });
 $(".header__nav").click(function () {//ナビゲーションのリンクがクリックされたら
     $(".menu_btn").removeClass('active');//ボタンの activeクラスを除去し
