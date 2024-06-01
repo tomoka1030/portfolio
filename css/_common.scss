@@ -196,7 +196,8 @@ body{
     display: inline-block;
     width: 150px;
     height: 3px;
-    margin: 0;border-radius: 10px;
+    margin: 0;
+    // border-radius: 10px;
 
     cursor: pointer;
     background: variable.$pink-beige;
@@ -211,11 +212,10 @@ body{
 }
 
 .slick-dots .slick-active {
-    border-radius: 10px;
+    // border-radius: 10px;
     background: variable.$peach-fuzz;
     cursor: pointer;
 }
-
 
 .slick-dots li button:before {
   font-family: 'slick';
@@ -232,6 +232,10 @@ body{
   color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+li.slick-active{
+  border-radius: 10px;
 }
 
 .slick-prev:before,
