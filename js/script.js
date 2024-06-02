@@ -171,9 +171,15 @@ $(document).ready(function () {
             variableWidth:true,
             responsive: [
                 {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToScroll:2,
+                    }
+                },
+                {
                     breakpoint: 768,
                     settings: {
-                        slidesToScroll:1,
+                        slidesToScroll:2,
                     }
                 }
             ]

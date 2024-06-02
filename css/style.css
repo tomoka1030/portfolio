@@ -1563,6 +1563,11 @@ contact ページ
   margin-right: 40px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 1100px) {
+  .flow__item {
+    margin-right: 10px;
+  }
+}
 .flow__number {
   width: 47px;
   padding: 3px 1px 3px 5px;
@@ -1622,9 +1627,19 @@ contact ページ
 .flow .slick-dots li:nth-child(3) {
   display: none;
 }
+@media screen and (max-width: 1100px) {
+  .flow .slick-dots li:nth-child(3) {
+    display: inline-block;
+  }
+}
 @media screen and (max-width: 767px) {
   .flow .slick-dots li:nth-child(3) {
     display: inline-block;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .flow .slick-dots li {
+    width: 100px;
   }
 }
 @media screen and (max-width: 767px) {

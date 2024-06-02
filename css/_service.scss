@@ -205,6 +205,10 @@
         width: 213px;
         margin-right: 40px;
         box-sizing: border-box;
+
+        @media screen and (max-width: 1100px) {
+            margin-right: 10px;
+        }
     }
 
     &__number{
@@ -269,10 +273,19 @@
         &:nth-child(3){
             display: none;
 
+            @media screen and (max-width: 1100px){
+                display: inline-block;
+            }
+
             @include media(md){
                 display: inline-block;
             }
         }
+
+        @media screen and (max-width: 1100px) {
+            width: 100px;
+        }
+
         @include media(md){
             width: 40px;
         }
