@@ -1639,7 +1639,7 @@ contact ページ
 }
 @media screen and (max-width: 1100px) {
   .flow .slick-dots li {
-    width: 100px;
+    width: 120px;
   }
 }
 @media screen and (max-width: 767px) {
