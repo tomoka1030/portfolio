@@ -167,7 +167,7 @@ $(document).ready(function () {
             infinite: false,// スライダーのループを無効にする
             arrows: false,
             // pauseOnHover: true,// マウスホバー時に自動再生を一時停止する
-            slidesToScroll: 5,
+            slidesToScroll: 4,
             variableWidth:true,
             responsive: [
                 {
