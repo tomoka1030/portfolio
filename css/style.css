@@ -138,6 +138,7 @@ color
   color: #5E2F2A;
   text-decoration: none;
   transition: 0.3s;
+  opacity: 1;
 }
 @media screen and (max-width: 767px) {
   .page__link .page__item a {
@@ -409,6 +410,10 @@ img {
 /* ------------
 全ページ共通のcss
 // ------------- */
+* {
+  outline: 2px solid blue;
+}
+
 body {
   display: none;
 }

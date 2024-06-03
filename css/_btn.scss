@@ -135,6 +135,7 @@
             color: variable.$text-color;
             text-decoration: none;
             transition: 0.3s;
+            opacity: 1;
 
             @include media(md){
                 width: 100%;
