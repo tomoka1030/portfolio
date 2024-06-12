@@ -750,8 +750,15 @@ works/下層ページ
                 @include media(md){
                     width: 100%;
                     padding:10px 5px 0 5px;
-                }   
+                } 
+
+                a{
+                    @include media(md){
+                        word-break: break-all;
+                    } 
+                }
             }
+
         }
         @include media(md){
             padding-top: 78px;
