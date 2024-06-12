@@ -755,6 +755,7 @@ works/下層ページ
                 a{
                     @include media(md){
                         word-break: break-all;
+                        display: inline-block;
                     } 
                 }
             }

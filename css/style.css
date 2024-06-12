@@ -2374,6 +2374,7 @@ works/下層ページ
 @media screen and (max-width: 767px) {
   .work__desc dl dd a {
     word-break: break-all;
+    display: inline-block;
   }
 }
 @media screen and (max-width: 767px) {
